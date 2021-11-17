@@ -6,7 +6,7 @@
 | 날짜  | 내용  | 링크 |
 | :---: | :---: | :---: |
 | 2021.11.16 | 기획안 작성 | [1차 스프린트](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.16/Day1.md) |
-| 2021.11.17 | - | - |
+| 2021.11.17 | 와이어 프레임 작성 | [2차 스프린트](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.17/Day2.md) |
 
 
 ## 출시 프로젝트 기획 항목
