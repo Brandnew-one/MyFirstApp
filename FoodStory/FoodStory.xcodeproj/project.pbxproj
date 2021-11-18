@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */; };
+		AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0527461971007E5F15 /* AppDelegate.swift */; };
+		AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0727461971007E5F15 /* SceneDelegate.swift */; };
+		AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0927461971007E5F15 /* ViewController.swift */; };
+		AE72DC0D27461971007E5F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC0B27461971007E5F15 /* Main.storyboard */; };
+		AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC0E27461973007E5F15 /* Assets.xcassets */; };
+		AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */; };
+		AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC1A274619CD007E5F15 /* MainViewController.swift */; };
+		AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */; };
+		AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC1E27461AB3007E5F15 /* Setting.storyboard */; };
+		AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC2027461ABD007E5F15 /* Add.storyboard */; };
+		AE72DC2327461AD6007E5F15 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */; };
+		AE72DC2527461AE8007E5F15 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2427461AE8007E5F15 /* SettingViewController.swift */; };
+		AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2627461AFB007E5F15 /* AddViewController.swift */; };
+		AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */; };
+		AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE72DC0227461971007E5F15 /* FoodStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE72DC0527461971007E5F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE72DC0727461971007E5F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE72DC0927461971007E5F15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE72DC0C27461971007E5F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE72DC0E27461973007E5F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE72DC1127461973007E5F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE72DC1327461973007E5F15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE72DC1A274619CD007E5F15 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		AE72DC1E27461AB3007E5F15 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		AE72DC2027461ABD007E5F15 /* Add.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Add.storyboard; sourceTree = "<group>"; };
+		AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AE72DC2427461AE8007E5F15 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		AE72DC2627461AFB007E5F15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE72DBFF27461971007E5F15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE72DBF927461971007E5F15 = {
+			isa = PBXGroup;
+			children = (
+				AE72DC0427461971007E5F15 /* FoodStory */,
+				AE72DC0327461971007E5F15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE72DC0327461971007E5F15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC0227461971007E5F15 /* FoodStory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE72DC0427461971007E5F15 /* FoodStory */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC0B27461971007E5F15 /* Main.storyboard */,
+				AE72DC1A274619CD007E5F15 /* MainViewController.swift */,
+				AE72DC0E27461973007E5F15 /* Assets.xcassets */,
+				AE72DC1327461973007E5F15 /* Info.plist */,
+				AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */,
+				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
+				AE72DC2027461ABD007E5F15 /* Add.storyboard */,
+				AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */,
+				AE72DC2427461AE8007E5F15 /* SettingViewController.swift */,
+				AE72DC2627461AFB007E5F15 /* AddViewController.swift */,
+				AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */,
+				AE72DC2827462AB0007E5F15 /* Defaults */,
+				AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */,
+				AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */,
+			);
+			path = FoodStory;
+			sourceTree = "<group>";
+		};
+		AE72DC2827462AB0007E5F15 /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC0527461971007E5F15 /* AppDelegate.swift */,
+				AE72DC0727461971007E5F15 /* SceneDelegate.swift */,
+				AE72DC0927461971007E5F15 /* ViewController.swift */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE72DC0127461971007E5F15 /* FoodStory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE72DC1627461973007E5F15 /* Build configuration list for PBXNativeTarget "FoodStory" */;
+			buildPhases = (
+				AE72DBFE27461971007E5F15 /* Sources */,
+				AE72DBFF27461971007E5F15 /* Frameworks */,
+				AE72DC0027461971007E5F15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoodStory;
+			packageProductDependencies = (
+				AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */,
+			);
+			productName = FoodStory;
+			productReference = AE72DC0227461971007E5F15 /* FoodStory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE72DBFA27461971007E5F15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					AE72DC0127461971007E5F15 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = AE72DBFD27461971007E5F15 /* Build configuration list for PBXProject "FoodStory" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE72DBF927461971007E5F15;
+			packageReferences = (
+				AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
+			productRefGroup = AE72DC0327461971007E5F15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE72DC0127461971007E5F15 /* FoodStory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE72DC0027461971007E5F15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */,
+				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
+				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
+				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
+				AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */,
+				AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */,
+				AE72DC0D27461971007E5F15 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE72DBFE27461971007E5F15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE72DC2327461AD6007E5F15 /* CalendarViewController.swift in Sources */,
+				AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */,
+				AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */,
+				AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */,
+				AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */,
+				AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */,
+				AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */,
+				AE72DC2527461AE8007E5F15 /* SettingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE72DC0B27461971007E5F15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE72DC0C27461971007E5F15 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE72DC1127461973007E5F15 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE72DC1427461973007E5F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE72DC1527461973007E5F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE72DC1727461973007E5F15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4HDX5XCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodStory/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangwonshin.FoodStory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AE72DC1827461973007E5F15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4HDX5XCG8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodStory/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sangwonshin.FoodStory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE72DBFD27461971007E5F15 /* Build configuration list for PBXProject "FoodStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE72DC1427461973007E5F15 /* Debug */,
+				AE72DC1527461973007E5F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE72DC1627461973007E5F15 /* Build configuration list for PBXNativeTarget "FoodStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE72DC1727461973007E5F15 /* Debug */,
+				AE72DC1827461973007E5F15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AE72DBFA27461971007E5F15 /* Project object */;
+}
