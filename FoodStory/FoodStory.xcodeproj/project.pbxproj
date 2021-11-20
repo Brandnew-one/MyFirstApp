@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */; };
+		AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */; };
 		AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */; };
 		AE39ECDD274780790079462B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDC274780790079462B /* Realm */; };
 		AE39ECDF274780790079462B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDE274780790079462B /* RealmSwift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		AE39ECE0274781000079462B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		AE72DC0227461971007E5F15 /* FoodStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE72DC0527461971007E5F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */,
 				AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */,
+				AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */,
+				AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */,
+				AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */,
 				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
 				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
 				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
@@ -236,6 +243,7 @@
 				AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */,
 				AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */,
 				AE72DC2527461AE8007E5F15 /* SettingViewController.swift in Sources */,
+				AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

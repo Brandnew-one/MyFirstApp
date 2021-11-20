@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     var searchController: UISearchController!
     var localRealm = try! Realm()
     var diary: Results<UserDiary>!
+    var diarySearch: Results<UserDiary>!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,6 +22,8 @@ class MainViewController: UIViewController {
         
         let nibName = UINib(nibName: MainTableViewCell.identifier, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: MainTableViewCell.identifier)
+        let nibSearch = UINib(nibName: SearchTableViewCell.identifier, bundle: nil)
+        tableView.register(nibSearch, forCellReuseIdentifier: SearchTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -38,11 +41,20 @@ class MainViewController: UIViewController {
         
         print("Realm:",localRealm.configuration.fileURL!)
         diary = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
+        diarySearch = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+      return searchController.isActive && !searchBarIsEmpty()
     }
     
     
@@ -52,8 +64,6 @@ class MainViewController: UIViewController {
     func addButtonClicked() {
         let sb = UIStoryboard(name: "Add", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
-        //navigationController?.pushViewController(vc, animated: true)
-        //vc.modalPresentationStyle = .fullScreen
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
@@ -68,31 +78,52 @@ class MainViewController: UIViewController {
         let nav = UINavigationController(rootViewController: vc)
         
         vc.isEditingMode = true
-        vc.row = editButton.tag
+        if isFiltering() {
+            vc.passedDiary = diarySearch[editButton.tag]
+        }
+        else {
+            vc.passedDiary = diary[editButton.tag]
+        }
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
     
     func loadImageFromDocumentDirectory(imageName: String) -> UIImage? {
-        let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
-        let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
-        let path = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
+
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         
-        if let directoryPath = path.first {
-            let imageURL = URL(fileURLWithPath: directoryPath).appendingPathComponent(imageName)
-            return UIImage(contentsOfFile: imageURL.path)
+        let filePath = documentDirectory.appendingPathComponent("Image")
+        if !FileManager.default.fileExists(atPath: filePath.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
-        return nil
+        
+        let imageURL = filePath.appendingPathComponent(imageName)
+        return UIImage(contentsOfFile: imageURL.path)
+        
     }
     
     func deleteImageFromDocumentDirectory(imageName: String) {
+
         //1. 이미지 저장할 경로 설정 : Document 폴더
-        //Desktop/~~/~~/folder
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        
+        let filePath = documentDirectory.appendingPathComponent("Image")
+        if !FileManager.default.fileExists(atPath: filePath.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
         
         //2. 이미지 파일 이름 & 최종 경로 설정
         //Desktop/~~/~~/folder/222.png
-        let imageURL = documentDirectory.appendingPathComponent(imageName)
+        let imageURL = filePath.appendingPathComponent(imageName)
+        
         
         //4. 이미지 저장: 동일한 경로에 이미지를 저장하게 될 경우, 덮어쓰기
         //4-1. 이미지 경로 여부 확인 (만약 최종 경로에 동일한 파일이 있는 경우)
@@ -114,7 +145,11 @@ class MainViewController: UIViewController {
 extension MainViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        dump(searchController.searchBar.text)
+        guard let text = searchController.searchBar.text else { return }
+        let predicate = NSPredicate(format: "foodTitle CONTAINS[c] %@ OR foodMemo CONTAINS[c]  %@",text as CVarArg,text as! CVarArg)
+        self.diarySearch = diary.filter(predicate)
+        tableView.reloadData()
     }
 }
 
@@ -132,31 +167,77 @@ extension MainViewController: UISearchBarDelegate {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return diary.count
+        if isFiltering() {
+            return diarySearch.count
+        }
+        else {
+            return diary.count
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height * 0.7
+        if isFiltering() {
+            return UIScreen.main.bounds.height * 0.7
+        }
+        else {
+            return UIScreen.main.bounds.height * 0.7
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier) as? MainTableViewCell else {
-            return UITableViewCell()
+        
+        //Table Cell 새로운 디자인 필요 (만들긴 했지만 너무 구림...)
+        if isFiltering() {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier) as? MainTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            let row = diarySearch[indexPath.row]
+            
+//            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+//
+//            cell.foodNameLabel.text = row.foodTitle
+//            cell.ratingLabel.text = "\(row.userRating)"
+//            let date = DateFormatter()
+//            date.dateFormat = "yyyy년 MM월 dd일 a hh시 mm분"
+//            date.locale = Locale(identifier: "ko_KR")
+//            let nowDate = date.string(from: row.writeDate)
+//            cell.dateLabel.text = nowDate
+//            cell.diaryLabel.text = row.foodMemo
+            
+            cell.profileImage.clipsToBounds = true
+            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
+            cell.editButton.setTitle("", for: .normal)
+            cell.editButton.tag = indexPath.row
+            cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
+            
+            cell.profileName.text = row.foodTitle
+            cell.ratingLabel.text = "\(row.userRating)"
+            cell.diaryLabel.text = row.foodMemo
+            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+            
+            return cell
         }
         
-        cell.profileImage.clipsToBounds = true
-        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
-        cell.editButton.setTitle("", for: .normal)
-        cell.editButton.tag = indexPath.row
-        cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
-        
-        let row = diary[indexPath.row]
-        cell.profileName.text = row.foodTitle
-        cell.ratingLabel.text = "\(row.userRating)"
-        cell.diaryLabel.text = row.foodMemo
-        cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
-        
-        return cell
+        else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier) as? MainTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.profileImage.clipsToBounds = true
+            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
+            cell.editButton.setTitle("", for: .normal)
+            cell.editButton.tag = indexPath.row
+            cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
+            
+            let row = diary[indexPath.row]
+            cell.profileName.text = row.foodTitle
+            cell.ratingLabel.text = "\(row.userRating)"
+            cell.diaryLabel.text = row.foodMemo
+            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+            
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -166,12 +247,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let del = UIAlertAction(title: "확인", style: .default) { _ in
                 print("메모 삭제를 실행합니다.")
                 
-                let row = self.diary[indexPath.row]
-                try! self.localRealm.write {
-                    self.deleteImageFromDocumentDirectory(imageName: "\(row._id).png")
-                    self.localRealm.delete(row)
+                if self.isFiltering() {
+                    let row = self.diarySearch[indexPath.row]
+                    try! self.localRealm.write {
+                        self.deleteImageFromDocumentDirectory(imageName: "\(row._id).png")
+                        self.localRealm.delete(row)
+                    }
                 }
-                
+    
+                else {
+                    let row = self.diary[indexPath.row]
+                    try! self.localRealm.write {
+                        self.deleteImageFromDocumentDirectory(imageName: "\(row._id).png")
+                        self.localRealm.delete(row)
+                    }
+                }
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.reloadData()
             }

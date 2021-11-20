@@ -26,7 +26,9 @@ class AddViewController: UIViewController {
     var diary: Results<UserDiary>!
     var writeDate: Date = Date()
     var isEditingMode = false
-    var row = 0
+    //초기에는 row 값을 넘겨주는 방법을 사용했는데 그냥 object 인스턴스를 넘겨받으면 object_ID 를 알기 때문에 좀 더 쉽게 수정 할 수 있음!!
+    //isFiltering 분기처리를 하지 않아도 된다!
+    var passedDiary: UserDiary = UserDiary(writeDate: Date(), userRating: 0.0, foodTitle: "", foodMemo: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,22 +46,23 @@ class AddViewController: UIViewController {
         
         //수정 모드로 들어온 경우에는 이미지를 보여줄 수 있도록 설정
         if isEditingMode {
-            foodButton.setImage(loadImageFromDocumentDirectory(imageName: "\(diary[row]._id)"), for: .normal)
-            //starSlider.value = (Float)(diary[row].userRating) //딜레이와 함께 별점이 바뀌지 않음
-            datePicker.date = diary[row].writeDate
-            foodNameTextField.placeholder = diary[row].foodTitle
-            foodDiaryTextView.text = diary[row].foodMemo
+            foodButton.setImage(loadImageFromDocumentDirectory(imageName: "\(passedDiary._id).png"), for: .normal)
+            let preValue = (Float)(passedDiary.userRating)
+            print(preValue)
+            starSlider.value = preValue //값만 넣어주니까 슬라이더가 반응하지 않고 딜레이가 생김
+            slideStarSlider()
+            
+            datePicker.date = passedDiary.writeDate
+            writeDate = datePicker.date
+            foodNameTextField.text = passedDiary.foodTitle
+            foodDiaryTextView.text = passedDiary.foodMemo
+            
         }
         
     }
     
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
         let datePickerView = sender
-//        let date = DateFormatter()
-//        date.dateFormat = "yyyy년 MM월 dd일 a hh시 mm분"
-//        date.locale = Locale(identifier: "ko_KR")
-//        let stringDate = date.string(from: datePickerView.date)
-//        self.writeDate = date.date(from: stringDate)!
         self.writeDate = datePickerView.date
     }
     
@@ -81,7 +84,6 @@ class AddViewController: UIViewController {
     
     @objc
     func saveButtonClicked() {
-        //navigationController?.popViewController(animated: true)
         if !isEditingMode {
             let writeDate = self.writeDate
             let userRating = unitValue()
@@ -93,8 +95,17 @@ class AddViewController: UIViewController {
                 saveImageToDocumentDirectory(imageName: "\(task._id).png", image: foodButton.currentImage!)
             }
         }
+        
+        //추후에 필터기능을 추가하면 diary 를 부르는 과정을 필터에 따라 분기처리하는 과정이 필요하다
         else {
-            
+            let taskToUpdate = passedDiary
+            try! localRealm.write {
+                taskToUpdate.writeDate = self.writeDate
+                taskToUpdate.userRating = Double(unitValue())
+                taskToUpdate.foodTitle = foodNameTextField.text!
+                taskToUpdate.foodMemo = foodDiaryTextView.text
+                saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: foodButton.currentImage!)
+            }
         }
         dismiss(animated: true, completion: nil)
     }
@@ -121,7 +132,7 @@ class AddViewController: UIViewController {
                 value -= 1
                 starImageViews[i].image = UIImage(systemName: "star.fill")
             }
-            else if value > 0 && value < 0.5 {
+            else if value > 0 && value <= 0.5 {
                 value -= 0.5
                 starImageViews[i].image = UIImage(systemName: "star.leadinghalf.filled")
             }
@@ -133,12 +144,20 @@ class AddViewController: UIViewController {
     
     func saveImageToDocumentDirectory(imageName: String, image: UIImage) {
         //1. 이미지 저장할 경로 설정 : Document 폴더
-        //Desktop/~~/~~/folder
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        
+        let filePath = documentDirectory.appendingPathComponent("Image")
+        if !FileManager.default.fileExists(atPath: filePath.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
         
         //2. 이미지 파일 이름 & 최종 경로 설정
         //Desktop/~~/~~/folder/222.png
-        let imageURL = documentDirectory.appendingPathComponent(imageName)
+        let imageURL = filePath.appendingPathComponent(imageName)
         
         //3. 이미지 압축(optional) image.pngData()
         guard let data = image.jpegData(compressionQuality: 0.5) else { return }
@@ -166,16 +185,23 @@ class AddViewController: UIViewController {
     }
     
     func loadImageFromDocumentDirectory(imageName: String) -> UIImage? {
-        let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
-        let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
-        let path = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
         
-        if let directoryPath = path.first {
-            let imageURL = URL(fileURLWithPath: directoryPath).appendingPathComponent(imageName)
-            return UIImage(contentsOfFile: imageURL.path)
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        
+        let filePath = documentDirectory.appendingPathComponent("Image")
+        if !FileManager.default.fileExists(atPath: filePath.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
-        return nil
+        
+        let imageURL = filePath.appendingPathComponent(imageName)
+        return UIImage(contentsOfFile: imageURL.path)
+        
     }
+    
     
     func unitValue() -> Double {
         
