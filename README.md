@@ -8,6 +8,7 @@
 | 2021.11.16 | 기획안 작성 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.16/Day1.md) |
 | 2021.11.17 | 와이어 프레임 작성 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.17/Day2.md) |
 | 2021.11.18 | 뷰 구현 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.18/Day3.md) |
+| 2021.11.19 ~ 2021.11.20 | 테이블뷰 삭제 및 수정, 서치기능  |[링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.19%7E20/Day4%7E5.md) |
 
 
 
