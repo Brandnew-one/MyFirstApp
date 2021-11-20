@@ -52,7 +52,21 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39B-oL-0AV">
                         <rect key="frame" x="0.0" y="359.5" width="290" height="33"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-au-OU0">
+                                <rect key="frame" x="8" y="6" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="7Bp-au-OU0" firstAttribute="top" secondItem="39B-oL-0AV" secondAttribute="top" constant="6" id="N2m-Nc-QfC"/>
+                            <constraint firstAttribute="bottom" secondItem="7Bp-au-OU0" secondAttribute="bottom" constant="6" id="Qt3-xr-2Xz"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Bp-au-OU0" secondAttribute="trailing" constant="8" id="ZB4-TB-gQv"/>
+                            <constraint firstItem="7Bp-au-OU0" firstAttribute="leading" secondItem="39B-oL-0AV" secondAttribute="leading" constant="8" id="liH-IV-tcb"/>
+                        </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U87-nV-aO4">
                         <rect key="frame" x="0.0" y="392.5" width="290" height="74.5"/>
@@ -86,9 +100,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="diaryLabel" destination="U87-nV-aO4" id="jT0-Rd-R9l"/>
                 <outlet property="editButton" destination="auS-oS-svY" id="e7L-R6-wKr"/>
+                <outlet property="foodImageView" destination="EOF-Cd-xDd" id="fVs-Y4-g7n"/>
                 <outlet property="profileImage" destination="dak-1M-igP" id="SEN-zF-XfX"/>
                 <outlet property="profileName" destination="94T-CF-Lj4" id="FIm-Y9-iSr"/>
+                <outlet property="ratingLabel" destination="7Bp-au-OU0" id="u8Y-x6-sbM"/>
             </connections>
             <point key="canvasLocation" x="115.94202898550725" y="235.37946428571428"/>
         </tableViewCell>

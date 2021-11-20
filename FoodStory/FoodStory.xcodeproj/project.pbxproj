@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */; };
+		AE39ECDD274780790079462B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDC274780790079462B /* Realm */; };
+		AE39ECDF274780790079462B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDE274780790079462B /* RealmSwift */; };
+		AE39ECE1274781000079462B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39ECE0274781000079462B /* RealmModel.swift */; };
 		AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0527461971007E5F15 /* AppDelegate.swift */; };
 		AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0727461971007E5F15 /* SceneDelegate.swift */; };
 		AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0927461971007E5F15 /* ViewController.swift */; };
@@ -26,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE39ECE0274781000079462B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		AE72DC0227461971007E5F15 /* FoodStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE72DC0527461971007E5F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE72DC0727461971007E5F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE39ECDF274780790079462B /* RealmSwift in Frameworks */,
+				AE39ECDD274780790079462B /* Realm in Frameworks */,
 				AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +63,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE39ECE22747826B0079462B /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				AE39ECE0274781000079462B /* RealmModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		AE39ECE3274782780079462B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */,
+				AE72DC0B27461971007E5F15 /* Main.storyboard */,
+				AE72DC2027461ABD007E5F15 /* Add.storyboard */,
+				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
+				AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE39ECE4274782980079462B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC1A274619CD007E5F15 /* MainViewController.swift */,
+				AE72DC2627461AFB007E5F15 /* AddViewController.swift */,
+				AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */,
+				AE72DC2427461AE8007E5F15 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AE39ECE5274783850079462B /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */,
+				AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		AE72DBF927461971007E5F15 = {
 			isa = PBXGroup;
 			children = (
@@ -76,20 +122,13 @@
 		AE72DC0427461971007E5F15 /* FoodStory */ = {
 			isa = PBXGroup;
 			children = (
-				AE72DC0B27461971007E5F15 /* Main.storyboard */,
-				AE72DC1A274619CD007E5F15 /* MainViewController.swift */,
 				AE72DC0E27461973007E5F15 /* Assets.xcassets */,
 				AE72DC1327461973007E5F15 /* Info.plist */,
-				AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */,
-				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
-				AE72DC2027461ABD007E5F15 /* Add.storyboard */,
-				AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */,
-				AE72DC2427461AE8007E5F15 /* SettingViewController.swift */,
-				AE72DC2627461AFB007E5F15 /* AddViewController.swift */,
-				AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */,
+				AE39ECE3274782780079462B /* View */,
+				AE39ECE4274782980079462B /* ViewController */,
 				AE72DC2827462AB0007E5F15 /* Defaults */,
-				AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */,
-				AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */,
+				AE39ECE5274783850079462B /* TableViewCell */,
+				AE39ECE22747826B0079462B /* Realm */,
 			);
 			path = FoodStory;
 			sourceTree = "<group>";
@@ -122,6 +161,8 @@
 			name = FoodStory;
 			packageProductDependencies = (
 				AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */,
+				AE39ECDC274780790079462B /* Realm */,
+				AE39ECDE274780790079462B /* RealmSwift */,
 			);
 			productName = FoodStory;
 			productReference = AE72DC0227461971007E5F15 /* FoodStory.app */;
@@ -153,6 +194,7 @@
 			mainGroup = AE72DBF927461971007E5F15;
 			packageReferences = (
 				AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = AE72DC0327461971007E5F15 /* Products */;
 			projectDirPath = "";
@@ -189,6 +231,7 @@
 				AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */,
 				AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */,
 				AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */,
+				AE39ECE1274781000079462B /* RealmModel.swift in Sources */,
 				AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */,
 				AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */,
 				AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */,
@@ -424,6 +467,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.18.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +482,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		AE39ECDC274780790079462B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		AE39ECDE274780790079462B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

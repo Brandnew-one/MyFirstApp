@@ -15,6 +15,10 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var editButton: UIButton!
     
+    @IBOutlet weak var foodImageView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var diaryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
