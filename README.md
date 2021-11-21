@@ -9,6 +9,7 @@
 | 2021.11.17 | 와이어 프레임 작성 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.17/Day2.md) |
 | 2021.11.18 | 뷰 구현 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.18/Day3.md) |
 | 2021.11.19 ~ 2021.11.20 | 테이블뷰 삭제 및 수정, 서치기능  |[링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.19%7E20/Day4%7E5.md) |
+| 2021.11.21 | 서치 테이블뷰 수정, 코드 리팩토링 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.21/Day6.md) |
 
 
 
@@ -21,16 +22,16 @@
 | 이터레이션2 | 예상 구현시간 | 실제 구현 여부 | 이슈 |
 | :---: | :---: | :---: | :---: |
 | 외부 폰트 추가(+복습) | 1.5h | - | - |
-| 스토리보드/ 뷰컨트롤러 화면전환 구현 | 3h | - | - |
-| 등록 뷰에 ImagePicker, PHpicker 학습 및 추가 | 3h | - | - |
-| 홈 뷰 `UI(테이블뷰/셀/오토레이아웃)` | 2h | - | - |
-| 데이터베이스 스키마 구조 | 2h | - | - |
-| Document에 사용자가 등록하 사진 저장되도록 설정 | 1.5h | - | - |
-| 홈 뷰 테이블뷰에 Realm 연동 | 2h | - | - |
-| Search Controller 복습 | 2h | - | - |
-| 홈 뷰 Search Controller 연결 | 1h | - | - |
-| 홈 뷰 Search Controller 분기처리 `(동일View)` | 4h | - | - |
-| 달력 뷰 FSCalendar 학습 및 연결 | 2h | - | - |
+| 스토리보드/ 뷰컨트롤러 화면전환 구현 | 3h | v | 1차적으로 만든 디자인이 너무... 모든 기능을 구현뒤에 디자인을 따로 손보는 과정 필요|
+| 등록 뷰에 ImagePicker, PHpicker 학습 및 추가 | 3h | v | - |
+| 홈 뷰 `UI(테이블뷰/셀/오토레이아웃)` | 2h | v | - |
+| 데이터베이스 스키마 구조 | 2h | v | 사용자 프로필 사진만 따로 저장하는 데이터베이스를 하나 만들어야 한다. |
+| Document에 사용자가 등록하 사진 저장되도록 설정 | 1.5h | v | - |
+| 홈 뷰 테이블뷰에 Realm 연동 | 2h | v | - |
+| Search Controller 복습 | 2h | v | - |
+| 홈 뷰 Search Controller 연결 | 1h | v | - |
+| 홈 뷰 Search Controller 분기처리 `(동일View)` | 4h | v | - |
+| 달력 뷰 FSCalendar 학습 및 연결 | 2h | v | - |
 
 #### `11/22(월)~11/24(수)`
 | 이터레이션3 | 예상 구현시간 | 실제 구현 여부 | 이슈 |
