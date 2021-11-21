@@ -17,24 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQx-KN-eoH">
-                                <rect key="frame" x="186" y="438" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4T-xw-zu4" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="94" width="374" height="537.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-3q-aV1">
+                                <rect key="frame" x="70" y="671.5" width="274" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U4T-xw-zu4" secondAttribute="trailing" constant="20" id="9pS-Eh-GOK"/>
+                            <constraint firstItem="U4T-xw-zu4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.6" id="R9q-RC-p7M"/>
+                            <constraint firstItem="U4T-xw-zu4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Sys-wz-M2B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="49Z-3q-aV1" secondAttribute="trailing" constant="70" id="Zvs-9l-rSQ"/>
+                            <constraint firstItem="49Z-3q-aV1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="j2C-Mj-Xhz"/>
+                            <constraint firstItem="U4T-xw-zu4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="jHY-VQ-tJb"/>
+                            <constraint firstItem="49Z-3q-aV1" firstAttribute="top" secondItem="U4T-xw-zu4" secondAttribute="bottom" constant="40" id="zzv-Iv-B05"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="달력" image="calendar" catalog="system" id="gR4-ho-N8w"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarView" destination="U4T-xw-zu4" id="b3r-9G-2rk"/>
+                        <outlet property="testLabel" destination="49Z-3q-aV1" id="RS6-fq-gQ8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="98"/>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

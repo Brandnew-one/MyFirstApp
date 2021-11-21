@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */; };
 		AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */; };
+		AE0A3033274A1AA600C6EAFE /* Document+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A3032274A1AA600C6EAFE /* Document+Extension.swift */; };
+		AE0A3036274A1D9E00C6EAFE /* TableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A3035274A1D9E00C6EAFE /* TableViewCell+Extension.swift */; };
+		AE0A3039274A398C00C6EAFE /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = AE0A3038274A398C00C6EAFE /* FSCalendar */; };
 		AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */; };
 		AE39ECDD274780790079462B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDC274780790079462B /* Realm */; };
 		AE39ECDF274780790079462B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDE274780790079462B /* RealmSwift */; };
 		AE39ECE1274781000079462B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39ECE0274781000079462B /* RealmModel.swift */; };
 		AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0527461971007E5F15 /* AppDelegate.swift */; };
 		AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0727461971007E5F15 /* SceneDelegate.swift */; };
-		AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0927461971007E5F15 /* ViewController.swift */; };
 		AE72DC0D27461971007E5F15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC0B27461971007E5F15 /* Main.storyboard */; };
 		AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC0E27461973007E5F15 /* Assets.xcassets */; };
 		AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */; };
@@ -33,11 +35,12 @@
 /* Begin PBXFileReference section */
 		AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		AE0A3032274A1AA600C6EAFE /* Document+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+Extension.swift"; sourceTree = "<group>"; };
+		AE0A3035274A1D9E00C6EAFE /* TableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		AE39ECE0274781000079462B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		AE72DC0227461971007E5F15 /* FoodStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE72DC0527461971007E5F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE72DC0727461971007E5F15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE72DC0927461971007E5F15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE72DC0C27461971007E5F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE72DC0E27461973007E5F15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE72DC1127461973007E5F15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE39ECDF274780790079462B /* RealmSwift in Frameworks */,
+				AE0A3039274A398C00C6EAFE /* FSCalendar in Frameworks */,
 				AE39ECDD274780790079462B /* Realm in Frameworks */,
 				AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -67,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE0A3034274A1D6D00C6EAFE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AE0A3032274A1AA600C6EAFE /* Document+Extension.swift */,
+				AE0A3035274A1D9E00C6EAFE /* TableViewCell+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		AE39ECE22747826B0079462B /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 				AE72DC2827462AB0007E5F15 /* Defaults */,
 				AE39ECE5274783850079462B /* TableViewCell */,
 				AE39ECE22747826B0079462B /* Realm */,
+				AE0A3034274A1D6D00C6EAFE /* Extension */,
 			);
 			path = FoodStory;
 			sourceTree = "<group>";
@@ -144,7 +158,6 @@
 			children = (
 				AE72DC0527461971007E5F15 /* AppDelegate.swift */,
 				AE72DC0727461971007E5F15 /* SceneDelegate.swift */,
-				AE72DC0927461971007E5F15 /* ViewController.swift */,
 			);
 			path = Defaults;
 			sourceTree = "<group>";
@@ -169,6 +182,7 @@
 				AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */,
 				AE39ECDC274780790079462B /* Realm */,
 				AE39ECDE274780790079462B /* RealmSwift */,
+				AE0A3038274A398C00C6EAFE /* FSCalendar */,
 			);
 			productName = FoodStory;
 			productReference = AE72DC0227461971007E5F15 /* FoodStory.app */;
@@ -201,6 +215,7 @@
 			packageReferences = (
 				AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				AE0A3037274A398C00C6EAFE /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = AE72DC0327461971007E5F15 /* Products */;
 			projectDirPath = "";
@@ -235,9 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE72DC2327461AD6007E5F15 /* CalendarViewController.swift in Sources */,
-				AE72DC0A27461971007E5F15 /* ViewController.swift in Sources */,
 				AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */,
+				AE0A3036274A1D9E00C6EAFE /* TableViewCell+Extension.swift in Sources */,
 				AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */,
+				AE0A3033274A1AA600C6EAFE /* Document+Extension.swift in Sources */,
 				AE39ECE1274781000079462B /* RealmModel.swift in Sources */,
 				AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */,
 				AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */,
@@ -467,6 +483,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE0A3037274A398C00C6EAFE /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -486,6 +510,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE0A3038274A398C00C6EAFE /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE0A3037274A398C00C6EAFE /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		AE378FBD2746B95000FF365E /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;

@@ -19,6 +19,17 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var diaryLabel: UILabel!
     
+    
+    func configureCell(row: UserDiary) {
+        profileImage.clipsToBounds = true
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        editButton.setTitle("", for: .normal)
+        profileName.text = row.foodTitle
+        ratingLabel.text = "\(row.userRating)"
+        diaryLabel.text = row.foodMemo
+        foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

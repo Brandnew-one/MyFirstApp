@@ -12,11 +12,17 @@ class SearchTableViewCell: UITableViewCell {
     static let identifier = "SearchTableViewCell"
     
     @IBOutlet weak var foodImageView: UIImageView!
-    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var foodNameLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var diaryLabel: UILabel!
+    @IBOutlet var starImageViews: [UIImageView]!
     
+    
+    func configureCell(row: UserDiary) {
+        foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
+        foodNameLabel.text = row.foodTitle
+        diaryLabel.text = row.foodMemo
+        fillStarImage(userRating: row.userRating, starImages: starImageViews)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +32,6 @@ class SearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
     
 }

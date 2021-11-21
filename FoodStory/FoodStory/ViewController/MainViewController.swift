@@ -88,58 +88,7 @@ class MainViewController: UIViewController {
         present(nav, animated: true, completion: nil)
     }
     
-    func loadImageFromDocumentDirectory(imageName: String) -> UIImage? {
-
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-        
-        let filePath = documentDirectory.appendingPathComponent("Image")
-        if !FileManager.default.fileExists(atPath: filePath.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        let imageURL = filePath.appendingPathComponent(imageName)
-        return UIImage(contentsOfFile: imageURL.path)
-        
-    }
-    
-    func deleteImageFromDocumentDirectory(imageName: String) {
-
-        //1. 이미지 저장할 경로 설정 : Document 폴더
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        
-        let filePath = documentDirectory.appendingPathComponent("Image")
-        if !FileManager.default.fileExists(atPath: filePath.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-        
-        //2. 이미지 파일 이름 & 최종 경로 설정
-        //Desktop/~~/~~/folder/222.png
-        let imageURL = filePath.appendingPathComponent(imageName)
-        
-        
-        //4. 이미지 저장: 동일한 경로에 이미지를 저장하게 될 경우, 덮어쓰기
-        //4-1. 이미지 경로 여부 확인 (만약 최종 경로에 동일한 파일이 있는 경우)
-        if FileManager.default.fileExists(atPath: imageURL.path) {
-            //4-2. 기존 경로에 있는 이미지 삭제
-            do {
-                try FileManager.default.removeItem(at: imageURL)
-                print("이미지 삭제 완료")
-            }
-            catch {
-                print("이미지 삭제하지 못했습니다.")
-            }
-        }
-    }
 }
-
 
 
 extension MainViewController: UISearchResultsUpdating {
@@ -164,6 +113,7 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -177,7 +127,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isFiltering() {
-            return UIScreen.main.bounds.height * 0.7
+            //return UIScreen.main.bounds.height * 0.7
+            return 120
         }
         else {
             return UIScreen.main.bounds.height * 0.7
@@ -185,37 +136,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         //Table Cell 새로운 디자인 필요 (만들긴 했지만 너무 구림...)
         if isFiltering() {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier) as? MainTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier) as? SearchTableViewCell else {
                 return UITableViewCell()
             }
-            
             let row = diarySearch[indexPath.row]
-            
-//            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
-//
-//            cell.foodNameLabel.text = row.foodTitle
-//            cell.ratingLabel.text = "\(row.userRating)"
-//            let date = DateFormatter()
-//            date.dateFormat = "yyyy년 MM월 dd일 a hh시 mm분"
-//            date.locale = Locale(identifier: "ko_KR")
-//            let nowDate = date.string(from: row.writeDate)
-//            cell.dateLabel.text = nowDate
-//            cell.diaryLabel.text = row.foodMemo
-            
-            cell.profileImage.clipsToBounds = true
-            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
-            cell.editButton.setTitle("", for: .normal)
-            cell.editButton.tag = indexPath.row
-            cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
-            
-            cell.profileName.text = row.foodTitle
-            cell.ratingLabel.text = "\(row.userRating)"
-            cell.diaryLabel.text = row.foodMemo
-            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
-            
+            cell.configureCell(row: row)
             return cell
         }
         
@@ -223,19 +150,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier) as? MainTableViewCell else {
                 return UITableViewCell()
             }
-            
-            cell.profileImage.clipsToBounds = true
-            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.height / 2
+            let row = diary[indexPath.row]
+            cell.configureCell(row: row)
             cell.editButton.setTitle("", for: .normal)
             cell.editButton.tag = indexPath.row
             cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
-            
-            let row = diary[indexPath.row]
-            cell.profileName.text = row.foodTitle
-            cell.ratingLabel.text = "\(row.userRating)"
-            cell.diaryLabel.text = row.foodMemo
-            cell.foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
-            
             return cell
         }
     }
