@@ -10,6 +10,7 @@
 | 2021.11.18 | 뷰 구현 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.18/Day3.md) |
 | 2021.11.19 ~ 2021.11.20 | 테이블뷰 삭제 및 수정, 서치기능  |[링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.19%7E20/Day4%7E5.md) |
 | 2021.11.21 | 서치 테이블뷰 수정, 코드 리팩토링 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.21/Day6.md) |
+| 2021.11.22 | FSCalendar 이벤트, 컬렉션 뷰 추가 및 수정 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.22/Day7.md) |
 
 
 
