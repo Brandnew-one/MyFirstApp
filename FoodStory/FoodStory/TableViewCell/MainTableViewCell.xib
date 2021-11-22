@@ -54,7 +54,17 @@
                         <rect key="frame" x="0.0" y="359.5" width="290" height="33"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bp-au-OU0">
-                                <rect key="frame" x="8" y="6" width="41.5" height="21"/>
+                                <rect key="frame" x="240.5" y="6" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="voQ-9i-K5T">
+                                <rect key="frame" x="213.5" y="6" width="22" height="20"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhO-Cz-fLk">
+                                <rect key="frame" x="8" y="6" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,10 +72,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="7Bp-au-OU0" firstAttribute="top" secondItem="39B-oL-0AV" secondAttribute="top" constant="6" id="N2m-Nc-QfC"/>
-                            <constraint firstAttribute="bottom" secondItem="7Bp-au-OU0" secondAttribute="bottom" constant="6" id="Qt3-xr-2Xz"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7Bp-au-OU0" secondAttribute="trailing" constant="8" id="ZB4-TB-gQv"/>
-                            <constraint firstItem="7Bp-au-OU0" firstAttribute="leading" secondItem="39B-oL-0AV" secondAttribute="leading" constant="8" id="liH-IV-tcb"/>
+                            <constraint firstItem="lhO-Cz-fLk" firstAttribute="centerY" secondItem="39B-oL-0AV" secondAttribute="centerY" id="4ff-uD-mgI"/>
+                            <constraint firstItem="lhO-Cz-fLk" firstAttribute="leading" secondItem="39B-oL-0AV" secondAttribute="leading" constant="8" id="BAT-wf-LoD"/>
+                            <constraint firstItem="7Bp-au-OU0" firstAttribute="leading" secondItem="voQ-9i-K5T" secondAttribute="trailing" constant="5" id="BML-2x-y8O"/>
+                            <constraint firstItem="voQ-9i-K5T" firstAttribute="centerY" secondItem="39B-oL-0AV" secondAttribute="centerY" id="c56-cv-i4j"/>
+                            <constraint firstAttribute="trailing" secondItem="7Bp-au-OU0" secondAttribute="trailing" constant="8" id="i5a-ZN-E9z"/>
+                            <constraint firstItem="7Bp-au-OU0" firstAttribute="centerY" secondItem="39B-oL-0AV" secondAttribute="centerY" id="uaN-lv-FP8"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U87-nV-aO4">
@@ -100,6 +112,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="lhO-Cz-fLk" id="0K1-3M-0gN"/>
                 <outlet property="diaryLabel" destination="U87-nV-aO4" id="jT0-Rd-R9l"/>
                 <outlet property="editButton" destination="auS-oS-svY" id="e7L-R6-wKr"/>
                 <outlet property="foodImageView" destination="EOF-Cd-xDd" id="fVs-Y4-g7n"/>
@@ -113,11 +126,15 @@
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="sini" width="1440" height="1080"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

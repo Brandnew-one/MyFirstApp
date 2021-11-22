@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCollectionViewCell" id="gTV-IL-0wX" customClass="CalendarCollectionViewCell" customModule="FoodStory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sini" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-4j-LPP">
+                        <rect key="frame" x="8" y="8" width="141" height="129"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="vCf-4j-LPP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="A0l-Dh-yCT"/>
+                <constraint firstAttribute="trailing" secondItem="vCf-4j-LPP" secondAttribute="trailing" constant="8" id="TkD-FS-cWu"/>
+                <constraint firstAttribute="bottom" secondItem="vCf-4j-LPP" secondAttribute="bottom" constant="8" id="Ula-k7-ldk"/>
+                <constraint firstItem="vCf-4j-LPP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="sEx-5e-M0j"/>
+            </constraints>
+            <size key="customSize" width="157" height="145"/>
+            <connections>
+                <outlet property="collectionImageView" destination="vCf-4j-LPP" id="H1M-3k-nqO"/>
+            </connections>
+            <point key="canvasLocation" x="215.21739130434784" y="117.52232142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sini" width="1440" height="1080"/>
+    </resources>
+</document>

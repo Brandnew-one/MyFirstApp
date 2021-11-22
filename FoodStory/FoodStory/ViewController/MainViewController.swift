@@ -87,7 +87,6 @@ class MainViewController: UIViewController {
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
-    
 }
 
 
@@ -156,6 +155,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.editButton.tag = indexPath.row
             cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isFiltering() {
+            let sb = UIStoryboard(name: "Add", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+            let nav = UINavigationController(rootViewController: vc)
+            
+            vc.isEditingMode = true
+            vc.passedDiary = diarySearch[indexPath.row]
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true, completion: nil)
         }
     }
     

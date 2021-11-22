@@ -17,6 +17,7 @@ class MainTableViewCell: UITableViewCell {
     
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var diaryLabel: UILabel!
     
     
@@ -26,6 +27,7 @@ class MainTableViewCell: UITableViewCell {
         editButton.setTitle("", for: .normal)
         profileName.text = row.foodTitle
         ratingLabel.text = "\(row.userRating)"
+        dateLabel.text = dateCal(nowDate: row.writeDate)
         diaryLabel.text = row.foodMemo
         foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
     }

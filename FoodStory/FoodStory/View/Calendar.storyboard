@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,26 +19,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4T-xw-zu4" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="94" width="374" height="537.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="493"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-3q-aV1">
-                                <rect key="frame" x="70" y="671.5" width="274" height="25.5"/>
+                                <rect key="frame" x="70" y="577" width="274" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dTB-nz-unG">
+                                <rect key="frame" x="20" y="622.5" width="374" height="179"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pit-Kr-oCW">
+                                    <size key="itemSize" width="131" height="122"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q7g-XU-StV">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="122"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UOh-dl-Te0">
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="131" height="122"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dTB-nz-unG" firstAttribute="top" secondItem="49Z-3q-aV1" secondAttribute="bottom" constant="20" id="8Tb-in-ceM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="U4T-xw-zu4" secondAttribute="trailing" constant="20" id="9pS-Eh-GOK"/>
-                            <constraint firstItem="U4T-xw-zu4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.6" id="R9q-RC-p7M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dTB-nz-unG" secondAttribute="trailing" constant="20" id="HUw-Ck-eJ1"/>
+                            <constraint firstItem="U4T-xw-zu4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.55" id="R9q-RC-p7M"/>
                             <constraint firstItem="U4T-xw-zu4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Sys-wz-M2B"/>
+                            <constraint firstItem="dTB-nz-unG" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.2" id="Tt7-Gh-Jjl"/>
+                            <constraint firstItem="dTB-nz-unG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Xax-on-P9s"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="49Z-3q-aV1" secondAttribute="trailing" constant="70" id="Zvs-9l-rSQ"/>
                             <constraint firstItem="49Z-3q-aV1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="j2C-Mj-Xhz"/>
-                            <constraint firstItem="U4T-xw-zu4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="jHY-VQ-tJb"/>
-                            <constraint firstItem="49Z-3q-aV1" firstAttribute="top" secondItem="U4T-xw-zu4" secondAttribute="bottom" constant="40" id="zzv-Iv-B05"/>
+                            <constraint firstItem="U4T-xw-zu4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="jHY-VQ-tJb"/>
+                            <constraint firstItem="49Z-3q-aV1" firstAttribute="top" secondItem="U4T-xw-zu4" secondAttribute="bottom" constant="20" id="zzv-Iv-B05"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="달력" image="calendar" catalog="system" id="gR4-ho-N8w"/>
@@ -45,6 +71,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarView" destination="U4T-xw-zu4" id="b3r-9G-2rk"/>
+                        <outlet property="collectionView" destination="dTB-nz-unG" id="jtS-BQ-trF"/>
                         <outlet property="testLabel" destination="49Z-3q-aV1" id="RS6-fq-gQ8"/>
                     </connections>
                 </viewController>
@@ -57,6 +84,9 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
