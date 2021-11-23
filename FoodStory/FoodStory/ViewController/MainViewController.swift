@@ -130,7 +130,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return 120
         }
         else {
-            return UIScreen.main.bounds.height * 0.7
+            return UIScreen.main.bounds.height * 0.8
         }
     }
     

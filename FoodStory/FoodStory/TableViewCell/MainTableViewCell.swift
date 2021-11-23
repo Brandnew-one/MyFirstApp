@@ -11,6 +11,12 @@ class MainTableViewCell: UITableViewCell {
 
     static let identifier = "MainTableViewCell"
     
+    
+    @IBOutlet weak var overView: UIView!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var centerView: UIView!
+    @IBOutlet weak var bottomView: UILabel!
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var editButton: UIButton!
@@ -22,6 +28,21 @@ class MainTableViewCell: UITableViewCell {
     
     
     func configureCell(row: UserDiary) {
+        
+        overView.clipsToBounds = true
+        overView.layer.cornerRadius = 10
+        
+        topView.clipsToBounds = true
+        topView.layer.cornerRadius = 10
+        topView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        centerView.clipsToBounds = true
+        centerView.layer.cornerRadius = 10
+        centerView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        
+        bottomView.clipsToBounds = true
+        bottomView.layer.cornerRadius = 10
+        
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         editButton.setTitle("", for: .normal)

@@ -34,6 +34,11 @@
 		AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */; };
 		AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */; };
 		AE939FEC274BDB4F00949F81 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE939FEB274BDB4F00949F81 /* RealmQuery.swift */; };
+		AEAD6BB9274CBE6E0027694C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */; };
+		AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */; };
+		AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */; };
+		AEAD6BBE274CCB170027694C /* SettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */; };
+		AEAD6BC0274CD0FA0027694C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BBF274CD0FA0027694C /* ColorSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		AE939FEB274BDB4F00949F81 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
+		AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingDetail.storyboard; sourceTree = "<group>"; };
+		AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailViewController.swift; sourceTree = "<group>"; };
+		AEAD6BBF274CD0FA0027694C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +123,9 @@
 				AE72DC1027461973007E5F15 /* LaunchScreen.storyboard */,
 				AE72DC0B27461971007E5F15 /* Main.storyboard */,
 				AE72DC2027461ABD007E5F15 /* Add.storyboard */,
-				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
 				AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */,
+				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
+				AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 				AE72DC2627461AFB007E5F15 /* AddViewController.swift */,
 				AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */,
 				AE72DC2427461AE8007E5F15 /* SettingViewController.swift */,
+				AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -137,6 +149,8 @@
 				AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */,
 				AE038B2A2748CD8A005C1CDD /* SearchTableViewCell.swift */,
 				AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */,
+				AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */,
+				AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 				AE39ECE22747826B0079462B /* Realm */,
 				AE0A3034274A1D6D00C6EAFE /* Extension */,
 				AE1D1878274B7FE9006EED1F /* CollectionViewCell */,
+				AEAD6BBF274CD0FA0027694C /* ColorSet.swift */,
 			);
 			path = FoodStory;
 			sourceTree = "<group>";
@@ -254,11 +269,13 @@
 				AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */,
 				AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */,
 				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
+				AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */,
 				AE1D1877274B7F78006EED1F /* CalendarCollectionViewCell.xib in Resources */,
 				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
 				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
 				AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */,
 				AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */,
+				AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */,
 				AE72DC0D27461971007E5F15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +291,10 @@
 				AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */,
 				AE939FEC274BDB4F00949F81 /* RealmQuery.swift in Sources */,
 				AE1D1876274B7F78006EED1F /* CalendarCollectionViewCell.swift in Sources */,
+				AEAD6BBE274CCB170027694C /* SettingDetailViewController.swift in Sources */,
 				AE0A3036274A1D9E00C6EAFE /* TableViewCell+Extension.swift in Sources */,
 				AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */,
+				AEAD6BB9274CBE6E0027694C /* SettingTableViewCell.swift in Sources */,
 				AE0A3033274A1AA600C6EAFE /* Document+Extension.swift in Sources */,
 				AE6CB94F274B33F60099FA0B /* Date+Extension.swift in Sources */,
 				AE39ECE1274781000079462B /* RealmModel.swift in Sources */,
@@ -283,6 +302,7 @@
 				AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */,
 				AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */,
 				AE72DC2527461AE8007E5F15 /* SettingViewController.swift in Sources */,
+				AEAD6BC0274CD0FA0027694C /* ColorSet.swift in Sources */,
 				AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
