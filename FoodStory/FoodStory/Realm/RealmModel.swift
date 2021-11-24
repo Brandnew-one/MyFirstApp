@@ -26,3 +26,18 @@ class UserDiary: Object {
         self.foodMemo = foodMemo
     }
 }
+
+class Userprofile: Object {
+    @Persisted var userName: String // 유저이름
+    @Persisted var userIntroduction: String // 유저설명
+    
+    //PK(필수) : Int, String, UUID, ObjectID 네 가지 사용가능 (ObjectID 는 자동으로)
+    @Persisted(primaryKey: true) var _id: ObjectId
+    
+    //클래스니까 생성자 구현해야 한다!
+    convenience init(userName: String, userIntroduction: String) {
+        self.init()
+        self.userName = userName
+        self.userIntroduction = userIntroduction
+    }
+}

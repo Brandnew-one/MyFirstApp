@@ -32,9 +32,14 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        foodDiaryTextView.textContainer.lineBreakMode = .byWordWrapping
+        
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicekd))
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark.square"), style: .plain, target: self, action: #selector(saveButtonClicked))
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         
         diary = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
         

@@ -18,6 +18,12 @@
 		AE39ECDD274780790079462B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDC274780790079462B /* Realm */; };
 		AE39ECDF274780790079462B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDE274780790079462B /* RealmSwift */; };
 		AE39ECE1274781000079462B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39ECE0274781000079462B /* RealmModel.swift */; };
+		AE591A3D274E942D005F746E /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */; };
+		AE591A3E274E942D005F746E /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */; };
+		AE591A3F274E942D005F746E /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */; };
+		AE591A40274E942D005F746E /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */; };
+		AE591A41274E942D005F746E /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */; };
+		AE591A43274E979A005F746E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE591A42274E979A005F746E /* Font+Extension.swift */; };
 		AE6CB94F274B33F60099FA0B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CB94E274B33F60099FA0B /* Date+Extension.swift */; };
 		AE72DC0627461971007E5F15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0527461971007E5F15 /* AppDelegate.swift */; };
 		AE72DC0827461971007E5F15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC0727461971007E5F15 /* SceneDelegate.swift */; };
@@ -33,6 +39,8 @@
 		AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2627461AFB007E5F15 /* AddViewController.swift */; };
 		AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */; };
 		AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */; };
+		AE904ACB274E066E00048B4A /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = AE904ACA274E066E00048B4A /* Zip */; };
+		AE904ACD274E11A200048B4A /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE904ACC274E11A200048B4A /* Alert+Extension.swift */; };
 		AE939FEC274BDB4F00949F81 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE939FEB274BDB4F00949F81 /* RealmQuery.swift */; };
 		AEAD6BB9274CBE6E0027694C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */; };
 		AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */; };
@@ -49,6 +57,12 @@
 		AE1D1874274B7F78006EED1F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE1D1875274B7F78006EED1F /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		AE39ECE0274781000079462B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
+		AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
+		AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
+		AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
+		AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
+		AE591A42274E979A005F746E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		AE6CB94E274B33F60099FA0B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		AE72DC0227461971007E5F15 /* FoodStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE72DC0527461971007E5F15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,7 @@
 		AE72DC2627461AFB007E5F15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		AE904ACC274E11A200048B4A /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		AE939FEB274BDB4F00949F81 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
 		AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -83,6 +98,7 @@
 				AE0A3039274A398C00C6EAFE /* FSCalendar in Frameworks */,
 				AE39ECDD274780790079462B /* Realm in Frameworks */,
 				AE378FBE2746B95000FF365E /* IQKeyboardManagerSwift in Frameworks */,
+				AE904ACB274E066E00048B4A /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +111,7 @@
 				AE0A3032274A1AA600C6EAFE /* Document+Extension.swift */,
 				AE0A3035274A1D9E00C6EAFE /* TableViewCell+Extension.swift */,
 				AE6CB94E274B33F60099FA0B /* Date+Extension.swift */,
+				AE904ACC274E11A200048B4A /* Alert+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -155,6 +172,19 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		AE591A37274E93F1005F746E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */,
+				AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */,
+				AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */,
+				AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */,
+				AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */,
+				AE591A42274E979A005F746E /* Font+Extension.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		AE72DBF927461971007E5F15 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +214,7 @@
 				AE0A3034274A1D6D00C6EAFE /* Extension */,
 				AE1D1878274B7FE9006EED1F /* CollectionViewCell */,
 				AEAD6BBF274CD0FA0027694C /* ColorSet.swift */,
+				AE591A37274E93F1005F746E /* Font */,
 			);
 			path = FoodStory;
 			sourceTree = "<group>";
@@ -218,6 +249,7 @@
 				AE39ECDC274780790079462B /* Realm */,
 				AE39ECDE274780790079462B /* RealmSwift */,
 				AE0A3038274A398C00C6EAFE /* FSCalendar */,
+				AE904ACA274E066E00048B4A /* Zip */,
 			);
 			productName = FoodStory;
 			productReference = AE72DC0227461971007E5F15 /* FoodStory.app */;
@@ -251,6 +283,7 @@
 				AE378FBC2746B95000FF365E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				AE0A3037274A398C00C6EAFE /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				AE904AC9274E066E00048B4A /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = AE72DC0327461971007E5F15 /* Products */;
 			projectDirPath = "";
@@ -267,12 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */,
+				AE591A41274E942D005F746E /* SpoqaHanSansNeo-Medium.otf in Resources */,
+				AE591A3F274E942D005F746E /* SpoqaHanSansNeo-Bold.otf in Resources */,
 				AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */,
 				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
 				AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */,
 				AE1D1877274B7F78006EED1F /* CalendarCollectionViewCell.xib in Resources */,
+				AE591A3D274E942D005F746E /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
+				AE591A3E274E942D005F746E /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
+				AE591A40274E942D005F746E /* SpoqaHanSansNeo-Light.otf in Resources */,
 				AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */,
 				AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */,
 				AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */,
@@ -303,6 +341,8 @@
 				AE72DC1B274619CD007E5F15 /* MainViewController.swift in Sources */,
 				AE72DC2527461AE8007E5F15 /* SettingViewController.swift in Sources */,
 				AEAD6BC0274CD0FA0027694C /* ColorSet.swift in Sources */,
+				AE904ACD274E11A200048B4A /* Alert+Extension.swift in Sources */,
+				AE591A43274E979A005F746E /* Font+Extension.swift in Sources */,
 				AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +591,14 @@
 				version = 10.18.0;
 			};
 		};
+		AE904AC9274E066E00048B4A /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -573,6 +621,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AE39ECDB274780790079462B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		AE904ACA274E066E00048B4A /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE904AC9274E066E00048B4A /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

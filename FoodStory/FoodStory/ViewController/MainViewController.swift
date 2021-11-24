@@ -7,6 +7,7 @@
 
 import RealmSwift
 import UIKit
+import SwiftUI
 
 class MainViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class MainViewController: UIViewController {
     var localRealm = try! Realm()
     var diary: Results<UserDiary>!
     var diarySearch: Results<UserDiary>!
+    var profile: Results<Userprofile>!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,12 +38,23 @@ class MainViewController: UIViewController {
         self.navigationItem.searchController = searchController
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.navigationItem.title = "제목"
+        self.navigationItem.title = "FoodStory"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addButtonClicked))
+        self.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         
         print("Realm:",localRealm.configuration.fileURL!)
         diary = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
         diarySearch = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
+        profile = localRealm.objects(Userprofile.self)
+        
+//        for family in UIFont.familyNames {
+//            print(family)
+//
+//            for sub in UIFont.fontNames(forFamilyName: family) {
+//                print("=======> \(sub)")
+//            }
+//        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -130,7 +143,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return 120
         }
         else {
-            return UIScreen.main.bounds.height * 0.8
+            return UIScreen.main.bounds.height * 0.7
         }
     }
     
@@ -154,6 +167,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.editButton.setTitle("", for: .normal)
             cell.editButton.tag = indexPath.row
             cell.editButton.addTarget(self, action: #selector(editButtonClicked(editButton:)), for: .touchUpInside)
+            if !profile.isEmpty {
+                cell.profileImage.image = loadImageFromDocumentDirectory(imageName: "\(profile[0]._id).png")
+            }
+            
             return cell
         }
     }
@@ -176,7 +193,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             
             let alert = UIAlertController(title: "일기를 삭제", message: "일기를 삭제하겠습니다.", preferredStyle: .alert)
             let del = UIAlertAction(title: "확인", style: .default) { _ in
-                print("메모 삭제를 실행합니다.")
+                //print("메모 삭제를 실행합니다.")
                 
                 if self.isFiltering() {
                     let row = self.diarySearch[indexPath.row]

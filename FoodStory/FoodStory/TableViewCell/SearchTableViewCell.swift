@@ -16,12 +16,16 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var diaryLabel: UILabel!
     @IBOutlet var starImageViews: [UIImageView]!
     
+    @IBOutlet weak var overView: UIView!
+    
     
     func configureCell(row: UserDiary) {
         foodImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).png")
         foodNameLabel.text = row.foodTitle
         diaryLabel.text = row.foodMemo
         fillStarImage(userRating: row.userRating, starImages: starImageViews)
+        overView.clipsToBounds = true
+        overView.layer.cornerRadius = 10
     }
 
     override func awakeFromNib() {
