@@ -43,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.79607843137254897" green="0.83529411764705885" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.70980392156862748" green="0.80392156862745101" blue="0.63921568627450975" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="dak-1M-igP" firstAttribute="leading" secondItem="SMO-xV-IJw" secondAttribute="leading" constant="8" id="4uI-5d-ciT"/>
                                     <constraint firstItem="dak-1M-igP" firstAttribute="centerY" secondItem="SMO-xV-IJw" secondAttribute="centerY" id="B0i-kf-FWa"/>
@@ -76,7 +76,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.79607843137254897" green="0.83529411764705885" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="lhO-Cz-fLk" firstAttribute="centerY" secondItem="39B-oL-0AV" secondAttribute="centerY" id="4ff-uD-mgI"/>
                                     <constraint firstItem="lhO-Cz-fLk" firstAttribute="leading" secondItem="39B-oL-0AV" secondAttribute="leading" constant="8" id="BAT-wf-LoD"/>
@@ -88,7 +88,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U87-nV-aO4">
                                 <rect key="frame" x="0.0" y="643" width="427" height="175"/>
-                                <color key="backgroundColor" red="0.79607843137254897" green="0.83529411764705885" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

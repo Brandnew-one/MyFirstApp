@@ -32,7 +32,7 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        print(#function)
 //        foodDiaryTextView.textContainer.lineBreakMode = .byWordWrapping
         
         self.navigationController?.navigationBar.prefersLargeTitles = false
@@ -40,6 +40,11 @@ class AddViewController: UIViewController {
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark.square"), style: .plain, target: self, action: #selector(saveButtonClicked))
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
+        
+        foodNameTextField.clipsToBounds = true
+        foodNameTextField.layer.cornerRadius = 10
+        foodDiaryTextView.clipsToBounds = true
+        foodDiaryTextView.layer.cornerRadius = 10
         
         diary = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
         
@@ -61,9 +66,7 @@ class AddViewController: UIViewController {
             writeDate = datePicker.date
             foodNameTextField.text = passedDiary.foodTitle
             foodDiaryTextView.text = passedDiary.foodMemo
-            
         }
-        
     }
     
     @IBAction func datePickerAction(_ sender: UIDatePicker) {
@@ -175,6 +178,7 @@ extension AddViewController: PHPickerViewControllerDelegate {
             itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in // 4
                 DispatchQueue.main.async {
                     self.foodButton.setImage(image as? UIImage, for: .normal)
+                    print("이미지 선택완료")
                 }
             }
         }

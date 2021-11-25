@@ -22,6 +22,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userIntroductionLabel: UILabel!
+    @IBOutlet weak var changeProfileButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,11 @@ class SettingViewController: UIViewController {
         
         userProfileImageView.clipsToBounds = true
         userProfileImageView.layer.cornerRadius = userProfileImageView.frame.height / 2
+        
+        changeProfileButton.clipsToBounds = true
+        changeProfileButton.layer.cornerRadius = 10
+        changeProfileButton.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 15)
+        changeProfileButton.setTitle("프로필 편집", for: .selected)
         
     }
     

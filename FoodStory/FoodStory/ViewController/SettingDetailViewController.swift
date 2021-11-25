@@ -14,6 +14,7 @@ class SettingDetailViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameTextView: UITextView!
     @IBOutlet weak var userIntroductionTextView: UITextView!
+    @IBOutlet weak var changeButton: UIButton!
     
     var configuration = PHPickerConfiguration()
     var localRealm = try! Realm()
@@ -40,8 +41,15 @@ class SettingDetailViewController: UIViewController {
             userIntroductionTextView.text = profile[0].userIntroduction
         }
         
+        changeButton.setTitle("프로필 사진 바꾸기", for: .selected)
+        
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        userNameTextView.clipsToBounds = true
+        userNameTextView.layer.cornerRadius = 10
+        userIntroductionTextView.clipsToBounds = true
+        userIntroductionTextView.layer.cornerRadius = 10
+        
     }
     
     @IBAction func changeImageButtonClicked(_ sender: UIButton) {

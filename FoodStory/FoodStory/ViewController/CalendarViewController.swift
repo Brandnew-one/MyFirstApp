@@ -22,6 +22,8 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print(#function)
+        
         calendarView.dataSource = self
         calendarView.delegate = self
         
@@ -58,6 +60,13 @@ class CalendarViewController: UIViewController {
         layout.scrollDirection = .horizontal
         
         collectionView.collectionViewLayout = layout
+    }
+    
+    //오늘 자 데이터를 추가,삭제 한 경우 바로 반영하기 위해서 추가
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+        testLabel.text = "\(searchDiary.count)개의 일기를 찾았어요"
     }
     
 

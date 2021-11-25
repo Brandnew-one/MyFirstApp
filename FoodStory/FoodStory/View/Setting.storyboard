@@ -34,8 +34,8 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-ZB-g7L">
                                         <rect key="frame" x="20" y="186.5" width="374" height="29.5"/>
-                                        <color key="backgroundColor" red="0.79607843137254897" green="0.83529411764705885" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="프로필 편집"/>
                                         <connections>
@@ -72,6 +72,13 @@
                                 <rect key="frame" x="0.0" y="288" width="414" height="525"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-Nd-nk7">
+                                <rect key="frame" x="8" y="273" width="398" height="1"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="zbE-XY-Oir"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,12 +90,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ILd-hI-atI" secondAttribute="trailing" id="OeO-I9-50d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ILd-hI-atI" secondAttribute="bottom" id="XAm-iT-Ae4"/>
                             <constraint firstItem="GhT-8g-VQ4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ZRu-km-mVr"/>
+                            <constraint firstItem="gsy-Nd-nk7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="a5x-Zr-7Vf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gsy-Nd-nk7" secondAttribute="trailing" constant="8" id="b0g-fN-d8g"/>
+                            <constraint firstItem="gsy-Nd-nk7" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="bottom" constant="5" id="sw7-ZK-MXs"/>
                             <constraint firstItem="ILd-hI-atI" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="bottom" constant="20" id="ufF-J4-gch"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="person.fill" catalog="system" id="3Lo-GY-4Oc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="changeProfileButton" destination="XzQ-ZB-g7L" id="tHJ-Lj-WXa"/>
                         <outlet property="tableView" destination="ILd-hI-atI" id="TdD-Zq-JLo"/>
                         <outlet property="userIntroductionLabel" destination="Cg1-AL-x86" id="xbM-zm-DUN"/>
                         <outlet property="userNameLabel" destination="4VT-S2-bXN" id="uBx-9o-VzO"/>

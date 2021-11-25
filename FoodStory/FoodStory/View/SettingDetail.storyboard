@@ -25,9 +25,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLd-HA-WfA">
-                                <rect key="frame" x="20" y="212" width="374" height="31"/>
-                                <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="50" y="212" width="314" height="31"/>
+                                <color key="backgroundColor" red="0.80784313725490198" green="0.86274509803921573" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="프로필 사진 바꾸기"/>
                                 <connections>
@@ -98,14 +98,15 @@
                             <constraint firstItem="205-pH-1NT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hyv-dL-rpy"/>
                             <constraint firstItem="205-pH-1NT" firstAttribute="top" secondItem="gXa-Em-QoO" secondAttribute="bottom" constant="8" id="im5-Ef-PSN"/>
                             <constraint firstItem="205-pH-1NT" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.05" id="ixO-VY-AdG"/>
-                            <constraint firstItem="hLd-HA-WfA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="le5-PH-WsM"/>
+                            <constraint firstItem="hLd-HA-WfA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="le5-PH-WsM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uh0-T1-AxY" secondAttribute="trailing" id="mVt-qU-14w"/>
                             <constraint firstItem="8Q1-hM-WTE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="ufF-Dh-z6m"/>
                             <constraint firstItem="uh0-T1-AxY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xzH-r1-o3f"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hLd-HA-WfA" secondAttribute="trailing" constant="20" id="y7d-oe-pVO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hLd-HA-WfA" secondAttribute="trailing" constant="50" id="y7d-oe-pVO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeButton" destination="hLd-HA-WfA" id="dyK-V5-Aiu"/>
                         <outlet property="profileImageView" destination="8Q1-hM-WTE" id="xnp-lB-zjs"/>
                         <outlet property="userIntroductionTextView" destination="7VJ-sV-mWj" id="KTu-Ej-5dM"/>
                         <outlet property="userNameTextView" destination="cK6-0L-LrO" id="6Nf-kG-gsl"/>

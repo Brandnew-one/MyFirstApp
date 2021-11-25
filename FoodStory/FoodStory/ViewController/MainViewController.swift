@@ -86,19 +86,52 @@ class MainViewController: UIViewController {
     //Realm 추가하고 passData 설정해주는 과정 필요
     @objc
     func editButtonClicked(editButton: UIButton) {
-        let sb = UIStoryboard(name: "Add", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
-        let nav = UINavigationController(rootViewController: vc)
         
-        vc.isEditingMode = true
-        if isFiltering() {
-            vc.passedDiary = diarySearch[editButton.tag]
+        showActionSheet {
+            print("삭제 구현해야 하무니다")
+            if self.isFiltering() {
+                let row = self.diarySearch[editButton.tag]
+                try! self.localRealm.write {
+                    self.deleteImageFromDocumentDirectory(imageName: "\(row._id).png")
+                    self.localRealm.delete(row)
+                }
+            }
+            else {
+                let row = self.diary[editButton.tag]
+                try! self.localRealm.write {
+                    self.deleteImageFromDocumentDirectory(imageName: "\(row._id).png")
+                    self.localRealm.delete(row)
+                }
+            }
+            self.tableView.reloadData()
+        } editAction: {
+            let sb = UIStoryboard(name: "Add", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+            let nav = UINavigationController(rootViewController: vc)
+            
+            vc.isEditingMode = true
+            if self.isFiltering() {
+                vc.passedDiary = self.diarySearch[editButton.tag]
+            }
+            else {
+                vc.passedDiary = self.diary[editButton.tag]
+            }
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
         }
-        else {
-            vc.passedDiary = diary[editButton.tag]
-        }
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true, completion: nil)
+//        let sb = UIStoryboard(name: "Add", bundle: nil)
+//        let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
+//        let nav = UINavigationController(rootViewController: vc)
+//
+//        vc.isEditingMode = true
+//        if isFiltering() {
+//            vc.passedDiary = diarySearch[editButton.tag]
+//        }
+//        else {
+//            vc.passedDiary = diary[editButton.tag]
+//        }
+//        nav.modalPresentationStyle = .fullScreen
+//        present(nav, animated: true, completion: nil)
     }
 }
 
