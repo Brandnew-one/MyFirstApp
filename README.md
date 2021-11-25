@@ -13,6 +13,7 @@
 | 2021.11.22 | FSCalendar 이벤트, 컬렉션 뷰 추가 및 수정 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.22/Day7.md) |
 | 2021.11.23 | SettingView 구현 및 앱 컬러 설정| [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.23/Day8.md) |
 | 2021.11.24 | 백업/복구기능, 앱아이콘 제작 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.24/Day9.md) |
+| 2021.11.25 | 버그 수정, UI 개선 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.25/Day10.md) |
 
 
 
