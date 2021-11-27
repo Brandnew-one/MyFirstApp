@@ -27,7 +27,7 @@ extension UIViewController {
         alert.addAction(cancle)
         
         self.present(alert, animated: true) {
-            print("액션시트가 올라왔습니다")
+            //print("액션시트가 올라왔습니다")
         }
     }
     
@@ -41,6 +41,15 @@ extension UIViewController {
         alert.addAction(ok)
         self.present(alert,animated: true) {
         }
+    }
+    
+    func imageAlert(okAction: @escaping () -> ()) {
+        let alert = UIAlertController(title: "이미지가 설정되지 않았어요", message: "이미지를 선택해주세요", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            okAction()
+        }
+        alert.addAction(ok)
+        self.present(alert,animated: true)
     }
     
 }

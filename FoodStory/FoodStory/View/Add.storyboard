@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,8 +23,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XlE-E1-pqt" secondAttribute="height" multiplier="1:1" id="l3O-au-fEp"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="sini"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="plus.app" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" scale="default"/>
+                                </state>
                                 <connections>
                                     <action selector="foodButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VQf-bh-z1x"/>
                                 </connections>
@@ -91,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-sf-Aga">
-                                <rect key="frame" x="20" y="423" width="290" height="45"/>
+                                <rect key="frame" x="62" y="423" width="290" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-qL-azx">
                                         <rect key="frame" x="0.0" y="-0.5" width="50" height="45"/>
@@ -118,7 +124,7 @@
                                 <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                             <slider opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="IbX-Ag-Omd">
-                                <rect key="frame" x="18" y="423" width="294" height="46"/>
+                                <rect key="frame" x="60" y="423" width="294" height="46"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </slider>
                         </subviews>
@@ -131,6 +137,7 @@
                             <constraint firstItem="rd2-TC-ZQt" firstAttribute="top" secondItem="K9Y-KU-6gP" secondAttribute="bottom" constant="18" id="Hyd-Df-JcU"/>
                             <constraint firstItem="kcF-r8-sSA" firstAttribute="top" secondItem="KVe-EC-hW9" secondAttribute="bottom" id="KUb-cf-yhf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UuB-Lo-J0n" secondAttribute="bottom" constant="20" id="KrZ-N8-y0R"/>
+                            <constraint firstItem="3qe-sf-Aga" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NT9-wN-pYq"/>
                             <constraint firstItem="kcF-r8-sSA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Oq8-KX-0hW"/>
                             <constraint firstItem="3qe-sf-Aga" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="UT7-6l-eSo"/>
                             <constraint firstItem="93r-JQ-o5m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UbX-Uv-4C4"/>
@@ -140,6 +147,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kcF-r8-sSA" secondAttribute="trailing" constant="20" id="Y0S-wT-LKH"/>
                             <constraint firstItem="KVe-EC-hW9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Zpg-WT-8aa"/>
                             <constraint firstItem="K9Y-KU-6gP" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="etm-bb-8G3"/>
+                            <constraint firstItem="IbX-Ag-Omd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="laP-va-sC8"/>
                             <constraint firstItem="KVe-EC-hW9" firstAttribute="top" secondItem="IbX-Ag-Omd" secondAttribute="bottom" constant="18" id="n8N-gg-MkX"/>
                             <constraint firstItem="rd2-TC-ZQt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="nQf-WX-3eB"/>
                             <constraint firstItem="3qe-sf-Aga" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.05" id="nfa-D9-CDK"/>
@@ -150,8 +158,6 @@
                             <constraint firstItem="UuB-Lo-J0n" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="sfK-Xu-fnT"/>
                             <constraint firstItem="K9Y-KU-6gP" firstAttribute="top" secondItem="XlE-E1-pqt" secondAttribute="bottom" constant="20" id="sxX-Kx-l79"/>
                             <constraint firstItem="IbX-Ag-Omd" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.7" id="tUW-Pn-Ftj"/>
-                            <constraint firstItem="IbX-Ag-Omd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="vLp-4j-Jvt"/>
-                            <constraint firstItem="3qe-sf-Aga" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="xSe-70-NkE"/>
                             <constraint firstItem="IbX-Ag-Omd" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.05" id="zzH-3I-H5x"/>
                         </constraints>
                     </view>
@@ -170,7 +176,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sini" width="1440" height="1080"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

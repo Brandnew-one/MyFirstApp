@@ -92,30 +92,38 @@ class AddViewController: UIViewController {
     
     @objc
     func saveButtonClicked() {
-        if !isEditingMode {
-            let writeDate = self.writeDate
-            let userRating = unitValue()
-            let foodTitle = foodNameTextField.text!
-            let foodMemo = foodDiaryTextView.text!
-            let task = UserDiary(writeDate: writeDate, userRating: Double(userRating), foodTitle: foodTitle, foodMemo: foodMemo)
-            try! localRealm.write {
-                localRealm.add(task)
-                saveImageToDocumentDirectory(imageName: "\(task._id).png", image: foodButton.currentImage!)
-            }
-        }
         
-        //추후에 필터기능을 추가하면 diary 를 부르는 과정을 필터에 따라 분기처리하는 과정이 필요하다
-        else {
-            let taskToUpdate = passedDiary
-            try! localRealm.write {
-                taskToUpdate.writeDate = self.writeDate
-                taskToUpdate.userRating = Double(unitValue())
-                taskToUpdate.foodTitle = foodNameTextField.text!
-                taskToUpdate.foodMemo = foodDiaryTextView.text
-                saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: foodButton.currentImage!)
+        if foodButton.currentImage!.isSymbolImage {
+            imageAlert {
+                print("이미지가 선택되지 않았습니다.")
             }
         }
-        dismiss(animated: true, completion: nil)
+        else {
+            if !isEditingMode {
+                let writeDate = self.writeDate
+                let userRating = unitValue()
+                let foodTitle = foodNameTextField.text!
+                let foodMemo = foodDiaryTextView.text!
+                let task = UserDiary(writeDate: writeDate, userRating: Double(userRating), foodTitle: foodTitle, foodMemo: foodMemo)
+                try! localRealm.write {
+                    localRealm.add(task)
+                    saveImageToDocumentDirectory(imageName: "\(task._id).png", image: foodButton.currentImage!)
+                }
+            }
+            
+            //추후에 필터기능을 추가하면 diary 를 부르는 과정을 필터에 따라 분기처리하는 과정이 필요하다
+            else {
+                let taskToUpdate = passedDiary
+                try! localRealm.write {
+                    taskToUpdate.writeDate = self.writeDate
+                    taskToUpdate.userRating = Double(unitValue())
+                    taskToUpdate.foodTitle = foodNameTextField.text!
+                    taskToUpdate.foodMemo = foodDiaryTextView.text
+                    saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: foodButton.currentImage!)
+                }
+            }
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc

@@ -150,11 +150,12 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         //복구
         else if indexPath.row == 2 {
-            //복구1. 파일앱 열기 + 확장자 (import 잊지말기)
-            let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypeArchive as String], in: .import)
-            documentPicker.delegate = self
-            documentPicker.allowsMultipleSelection = false
-            self.present(documentPicker, animated: true, completion: nil)
+            showAlert {
+                let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypeArchive as String], in: .import)
+                documentPicker.delegate = self
+                documentPicker.allowsMultipleSelection = false
+                self.present(documentPicker, animated: true, completion: nil)
+            }
         }
     }
 }

@@ -19,8 +19,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-8g-VQ4">
                                 <rect key="frame" x="0.0" y="44" width="414" height="224"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sini" translatesAutoresizingMaskIntoConstraints="NO" id="BqM-Oy-l5i">
-                                        <rect key="frame" x="20" y="18" width="134.5" height="134.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BqM-Oy-l5i">
+                                        <rect key="frame" x="20" y="19.5" width="134.5" height="131.5"/>
+                                        <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BqM-Oy-l5i" secondAttribute="height" multiplier="1:1" id="Od7-YS-7CR"/>
                                         </constraints>
@@ -42,7 +43,7 @@
                                             <action selector="changeProfileButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SCA-KI-WKL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="닉네임님 안녕하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg1-AL-x86">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="닉네임님 안녕하세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg1-AL-x86">
                                         <rect key="frame" x="172.5" y="51.5" width="223.5" height="67.5"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -113,6 +114,5 @@
     </scenes>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="sini" width="1440" height="1080"/>
     </resources>
 </document>

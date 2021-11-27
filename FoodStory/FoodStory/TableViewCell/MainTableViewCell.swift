@@ -16,6 +16,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var bottomView: UILabel!
+    @IBOutlet weak var bottomView2: UIView!
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileName: UILabel!
@@ -42,6 +43,9 @@ class MainTableViewCell: UITableViewCell {
         
         bottomView.clipsToBounds = true
         bottomView.layer.cornerRadius = 10
+        
+        bottomView2.clipsToBounds = true
+        bottomView2.layer.cornerRadius = 10
         
         profileImage.clipsToBounds = true
         profileImage.layer.cornerRadius = profileImage.frame.height / 2

@@ -66,25 +66,31 @@ class SettingDetailViewController: UIViewController {
     @objc
     func saveButtonClicekd() {
         
-        if profile.isEmpty {
-            let userName = userNameTextView.text ?? ""
-            let userIntroduction = userIntroductionTextView.text ?? ""
-            let task = Userprofile(userName: userName, userIntroduction: userIntroduction)
-            try! localRealm.write {
-                localRealm.add(task)
-                saveImageToDocumentDirectory(imageName: "\(task._id).png", image: profileImageView.image!)
+        if profileImageView.image!.isSymbolImage {
+            imageAlert {
+                print("이미지가 설정되지 않았어요")
             }
         }
-        
         else {
-            let taskToUpdate = profile[0]
-            try! localRealm.write {
-                taskToUpdate.userName = userNameTextView.text ?? ""
-                taskToUpdate.userIntroduction = userIntroductionTextView.text ?? ""
-                saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: profileImageView.image!)
+            if profile.isEmpty {
+                let userName = userNameTextView.text ?? ""
+                let userIntroduction = userIntroductionTextView.text ?? ""
+                let task = Userprofile(userName: userName, userIntroduction: userIntroduction)
+                try! localRealm.write {
+                    localRealm.add(task)
+                    saveImageToDocumentDirectory(imageName: "\(task._id).png", image: profileImageView.image!)
+                }
             }
+            else {
+                let taskToUpdate = profile[0]
+                try! localRealm.write {
+                    taskToUpdate.userName = userNameTextView.text ?? ""
+                    taskToUpdate.userIntroduction = userIntroductionTextView.text ?? ""
+                    saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: profileImageView.image!)
+                }
+            }
+            dismiss(animated: true, completion: nil)
         }
-        dismiss(animated: true, completion: nil)
     }
 }
 
