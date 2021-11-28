@@ -18,6 +18,7 @@ class CalendarViewController: UIViewController {
     
     let localRealm = try! Realm()
     var diary: Results<UserDiary>!
+    var eventDiary: Results<UserDiary>!
     var searchDiary: Results<UserDiary>!
     
     override func viewDidLoad() {
@@ -66,6 +67,7 @@ class CalendarViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
+        calendarView.reloadData()
         testLabel.text = "\(searchDiary.count)개의 일기를 찾았어요"
     }
     
@@ -75,9 +77,17 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//        print("MonthPosition: ",date)
         searchDiary = searchSameDay(date: date)
         testLabel.text = "\(searchDiary.count)개의 일기를 찾았어요"
         collectionView.reloadData()
+    }
+    
+    //여기서도 searchDiary를 그대로 사용하게 되면 didSelect date 가 달라지기 때문에 터질 수 있다. (일지작성)
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+//        print("numberOfEvent: ",date)
+        eventDiary = searchSameDay(date: date)
+        return eventDiary.count
     }
 }
 
@@ -86,7 +96,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchDiary.count
     }
-    
+        
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCollectionViewCell.identifier, for: indexPath) as? CalendarCollectionViewCell else {

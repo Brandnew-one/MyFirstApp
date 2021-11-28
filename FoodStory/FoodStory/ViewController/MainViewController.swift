@@ -119,19 +119,6 @@ class MainViewController: UIViewController {
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         }
-//        let sb = UIStoryboard(name: "Add", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "AddViewController") as! AddViewController
-//        let nav = UINavigationController(rootViewController: vc)
-//
-//        vc.isEditingMode = true
-//        if isFiltering() {
-//            vc.passedDiary = diarySearch[editButton.tag]
-//        }
-//        else {
-//            vc.passedDiary = diary[editButton.tag]
-//        }
-//        nav.modalPresentationStyle = .fullScreen
-//        present(nav, animated: true, completion: nil)
     }
 }
 

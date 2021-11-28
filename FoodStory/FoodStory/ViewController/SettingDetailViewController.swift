@@ -45,10 +45,14 @@ class SettingDetailViewController: UIViewController {
         
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        
         userNameTextView.clipsToBounds = true
         userNameTextView.layer.cornerRadius = 10
+        userNameTextView.font = UIFont().mainRegular
+
         userIntroductionTextView.clipsToBounds = true
         userIntroductionTextView.layer.cornerRadius = 10
+        userIntroductionTextView.font = UIFont().mainRegular
         
     }
     
