@@ -17,34 +17,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-8g-VQ4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BqM-Oy-l5i">
-                                        <rect key="frame" x="20" y="19.5" width="134.5" height="131.5"/>
+                                        <rect key="frame" x="20" y="21.5" width="100" height="97"/>
                                         <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="AdG-1j-1VG"/>
                                             <constraint firstAttribute="width" secondItem="BqM-Oy-l5i" secondAttribute="height" multiplier="1:1" id="Od7-YS-7CR"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="닉네임입니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-S2-bXN">
-                                        <rect key="frame" x="20" y="160.5" width="134.5" height="18"/>
+                                        <rect key="frame" x="20" y="128" width="100" height="18"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-ZB-g7L">
-                                        <rect key="frame" x="20" y="186.5" width="374" height="29.5"/>
+                                        <rect key="frame" x="20" y="161" width="374" height="24"/>
                                         <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="프로필 편집"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="프로필 편집"/>
                                         <connections>
                                             <action selector="changeProfileButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SCA-KI-WKL"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="닉네임님 안녕하세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg1-AL-x86">
-                                        <rect key="frame" x="172.5" y="51.5" width="223.5" height="67.5"/>
+                                        <rect key="frame" x="138" y="45" width="258" height="50"/>
                                         <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -56,25 +57,25 @@
                                     <constraint firstAttribute="trailing" secondItem="XzQ-ZB-g7L" secondAttribute="trailing" constant="20" id="BTC-hk-fYe"/>
                                     <constraint firstItem="4VT-S2-bXN" firstAttribute="top" secondItem="BqM-Oy-l5i" secondAttribute="bottom" constant="8" id="GUg-ir-VLB"/>
                                     <constraint firstItem="BqM-Oy-l5i" firstAttribute="leading" secondItem="GhT-8g-VQ4" secondAttribute="leading" constant="20" id="Jy0-1r-F2G"/>
+                                    <constraint firstItem="XzQ-ZB-g7L" firstAttribute="top" secondItem="4VT-S2-bXN" secondAttribute="bottom" constant="15" id="MyB-WN-YJq"/>
                                     <constraint firstItem="XzQ-ZB-g7L" firstAttribute="leading" secondItem="GhT-8g-VQ4" secondAttribute="leading" constant="20" id="Rfz-nt-zu1"/>
-                                    <constraint firstItem="XzQ-ZB-g7L" firstAttribute="top" secondItem="4VT-S2-bXN" secondAttribute="bottom" constant="8" id="TtD-qr-JTm"/>
+                                    <constraint firstAttribute="height" constant="200" id="TRH-k0-evD"/>
                                     <constraint firstAttribute="trailing" secondItem="Cg1-AL-x86" secondAttribute="trailing" constant="18" id="Zle-oq-rcT"/>
                                     <constraint firstItem="4VT-S2-bXN" firstAttribute="width" secondItem="BqM-Oy-l5i" secondAttribute="width" id="Zz6-2o-Fgi"/>
-                                    <constraint firstAttribute="bottom" secondItem="XzQ-ZB-g7L" secondAttribute="bottom" constant="8" id="cLS-Hf-cF0"/>
+                                    <constraint firstAttribute="bottom" secondItem="XzQ-ZB-g7L" secondAttribute="bottom" constant="15" id="cLS-Hf-cF0"/>
                                     <constraint firstItem="4VT-S2-bXN" firstAttribute="leading" secondItem="GhT-8g-VQ4" secondAttribute="leading" constant="20" id="ceW-aR-984"/>
-                                    <constraint firstItem="BqM-Oy-l5i" firstAttribute="height" secondItem="GhT-8g-VQ4" secondAttribute="height" multiplier="0.6" id="cuC-Tp-Pfv"/>
                                     <constraint firstItem="Cg1-AL-x86" firstAttribute="height" secondItem="BqM-Oy-l5i" secondAttribute="height" multiplier="0.5" id="e8K-5s-gSP"/>
                                     <constraint firstItem="Cg1-AL-x86" firstAttribute="leading" secondItem="BqM-Oy-l5i" secondAttribute="trailing" constant="18" id="udi-Lf-XL8"/>
                                     <constraint firstItem="Cg1-AL-x86" firstAttribute="centerY" secondItem="BqM-Oy-l5i" secondAttribute="centerY" id="zK9-DQ-EN4"/>
-                                    <constraint firstItem="BqM-Oy-l5i" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="top" constant="18" id="zgV-a6-XqZ"/>
+                                    <constraint firstItem="BqM-Oy-l5i" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="top" constant="20" id="zgV-a6-XqZ"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ILd-hI-atI">
-                                <rect key="frame" x="0.0" y="288" width="414" height="525"/>
+                                <rect key="frame" x="0.0" y="254" width="414" height="559"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.86274509799999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsy-Nd-nk7">
-                                <rect key="frame" x="8" y="273" width="398" height="1"/>
+                                <rect key="frame" x="8" y="249" width="398" height="1"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zbE-XY-Oir"/>
@@ -86,7 +87,6 @@
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GhT-8g-VQ4" secondAttribute="trailing" id="1u4-DW-qub"/>
                             <constraint firstItem="ILd-hI-atI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2ab-ZL-SFe"/>
-                            <constraint firstItem="GhT-8g-VQ4" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.25" id="4Ut-5n-HL5"/>
                             <constraint firstItem="GhT-8g-VQ4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E8Z-m7-INv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ILd-hI-atI" secondAttribute="trailing" id="OeO-I9-50d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ILd-hI-atI" secondAttribute="bottom" id="XAm-iT-Ae4"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="gsy-Nd-nk7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="a5x-Zr-7Vf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gsy-Nd-nk7" secondAttribute="trailing" constant="8" id="b0g-fN-d8g"/>
                             <constraint firstItem="gsy-Nd-nk7" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="bottom" constant="5" id="sw7-ZK-MXs"/>
-                            <constraint firstItem="ILd-hI-atI" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="bottom" constant="20" id="ufF-J4-gch"/>
+                            <constraint firstItem="ILd-hI-atI" firstAttribute="top" secondItem="GhT-8g-VQ4" secondAttribute="bottom" constant="10" id="ufF-J4-gch"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="설정" image="person.fill" catalog="system" id="3Lo-GY-4Oc"/>

@@ -178,6 +178,17 @@ class AddViewController: UIViewController {
 
 extension AddViewController: PHPickerViewControllerDelegate {
     
+    func resizeImage(image: UIImage, newWidth: CGFloat, newHeight: CGFloat) -> UIImage {
+        let newWidth = newWidth/2
+        let newHeight = newHeight/2
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+
+    
     //선택하고 종료되는 시점에 호출되는 함수라고 생각 (꼭 취소버튼을 기점으로 생각하지 말 것)
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         print(#function)
@@ -187,7 +198,10 @@ extension AddViewController: PHPickerViewControllerDelegate {
         if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
             itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in // 4
                 DispatchQueue.main.async {
-                    self.foodButton.setImage(image as? UIImage, for: .normal)
+                    let galleryImage = image as! UIImage
+                    let resizeImage = self.resizeImage(image: galleryImage, newWidth: galleryImage.size.width, newHeight: galleryImage.size.height)
+                    self.foodButton.setImage(resizeImage as? UIImage, for: .normal)
+//                    self.foodButton.setImage(image as? UIImage, for: .normal)
                     print("이미지 선택완료")
                 }
             }

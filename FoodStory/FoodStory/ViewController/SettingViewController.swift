@@ -41,7 +41,7 @@ class SettingViewController: UIViewController {
         }
         
         userProfileImageView.clipsToBounds = true
-        userProfileImageView.layer.cornerRadius = userProfileImageView.frame.height / 2
+        userProfileImageView.layer.cornerRadius = userProfileImageView.layer.frame.size.height / 2
         
         changeProfileButton.clipsToBounds = true
         changeProfileButton.layer.cornerRadius = 10
@@ -75,7 +75,7 @@ class SettingViewController: UIViewController {
     //7) 백업은 했는데 어디로 보낼까요? 띄워주는 창
     func presentActivityViewController() {
         //압축 파일 경로 가져오기
-        let fileName = (documentDirectoryPath()! as NSString).appendingPathComponent("TEST.zip")
+        let fileName = (documentDirectoryPath()! as NSString).appendingPathComponent("FoodStory.zip")
         let fileURL = URL(fileURLWithPath: fileName)
         
         let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
@@ -140,7 +140,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             }
             
             do {
-                let zipFilePath = try Zip.quickZipFiles(urlPath, fileName: "TEST") // Zip
+                let zipFilePath = try Zip.quickZipFiles(urlPath, fileName: "FoodStory") // Zip
                 print("압축경로: \(zipFilePath)")
                 presentActivityViewController()
             }
@@ -180,7 +180,7 @@ extension SettingViewController: UIDocumentPickerDelegate {
             //기존에 복구하고자 하는 zip 파일을 도큐먼트에 가지고 있을 경우, 도큐먼트에 위치한 zip 을 압축해제 하면됨
             do {
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let fileURL = documentDirectory.appendingPathComponent("TEST.zip")
+                let fileURL = documentDirectory.appendingPathComponent("FoodStory.zip")
                 try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
                     //print("progress: \(progress)")
                 }, fileOutputHandler: { unzippedFile in
@@ -199,7 +199,7 @@ extension SettingViewController: UIDocumentPickerDelegate {
             do {
                 try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
                 let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let fileURL = documentDirectory.appendingPathComponent("TEST.zip")
+                let fileURL = documentDirectory.appendingPathComponent("FoodStory.zip")
                 try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
                     //print("progress: \(progress)")
                 }, fileOutputHandler: { unzippedFile in

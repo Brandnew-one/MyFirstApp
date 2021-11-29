@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FoodStory-->
+        <!--Foodie Story-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="FoodStory" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <constraint firstItem="lGf-yG-kTb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lWd-h2-Udk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FoodStory" id="MLf-2Q-5U4">
+                    <navigationItem key="navigationItem" title="Foodie Story" id="MLf-2Q-5U4">
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="DLg-Lh-Yia">
                             <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>

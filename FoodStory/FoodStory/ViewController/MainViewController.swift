@@ -38,7 +38,7 @@ class MainViewController: UIViewController {
         self.navigationItem.searchController = searchController
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.navigationItem.title = "FoodStory"
+        self.navigationItem.title = "Foodie Story"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addButtonClicked))
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         

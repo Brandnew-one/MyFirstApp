@@ -12,7 +12,6 @@ extension UIViewController {
     static let backgroundColor = "CEDCC3"
     static let contentColor = "CBD5C5"
     static let tintColor = "3F674C"
-    
     static let testColor = "B5CDA3"
 }
 
