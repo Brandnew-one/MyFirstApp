@@ -198,11 +198,16 @@ extension AddViewController: PHPickerViewControllerDelegate {
         if let itemProvider = itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
             itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in // 4
                 DispatchQueue.main.async {
-                    let galleryImage = image as! UIImage
-                    let resizeImage = self.resizeImage(image: galleryImage, newWidth: galleryImage.size.width, newHeight: galleryImage.size.height)
-                    self.foodButton.setImage(resizeImage as? UIImage, for: .normal)
-//                    self.foodButton.setImage(image as? UIImage, for: .normal)
-                    print("이미지 선택완료")
+                    if let galleryImage = image as? UIImage {
+                        let resizeImage = self.resizeImage(image: galleryImage, newWidth: galleryImage.size.width, newHeight: galleryImage.size.height)
+                        self.foodButton.setImage(resizeImage as? UIImage, for: .normal)
+                        print("이미지 선택완료")
+                    }
+                    else {
+                        self.errorAlert {
+                            print("이미지 선택 실패")
+                        }
+                    }
                 }
             }
         }

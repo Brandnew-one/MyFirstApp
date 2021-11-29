@@ -18,10 +18,7 @@
 		AE39ECDD274780790079462B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDC274780790079462B /* Realm */; };
 		AE39ECDF274780790079462B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE39ECDE274780790079462B /* RealmSwift */; };
 		AE39ECE1274781000079462B /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE39ECE0274781000079462B /* RealmModel.swift */; };
-		AE591A3D274E942D005F746E /* SpoqaHanSansNeo-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */; };
 		AE591A3E274E942D005F746E /* SpoqaHanSansNeo-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */; };
-		AE591A3F274E942D005F746E /* SpoqaHanSansNeo-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */; };
-		AE591A40274E942D005F746E /* SpoqaHanSansNeo-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */; };
 		AE591A41274E942D005F746E /* SpoqaHanSansNeo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */; };
 		AE591A43274E979A005F746E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE591A42274E979A005F746E /* Font+Extension.swift */; };
 		AE6CB94F274B33F60099FA0B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6CB94E274B33F60099FA0B /* Date+Extension.swift */; };
@@ -57,10 +54,7 @@
 		AE1D1874274B7F78006EED1F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE1D1875274B7F78006EED1F /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		AE39ECE0274781000079462B /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
-		AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Thin.otf"; sourceTree = "<group>"; };
 		AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Regular.otf"; sourceTree = "<group>"; };
-		AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Bold.otf"; sourceTree = "<group>"; };
-		AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Light.otf"; sourceTree = "<group>"; };
 		AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpoqaHanSansNeo-Medium.otf"; sourceTree = "<group>"; };
 		AE591A42274E979A005F746E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		AE6CB94E274B33F60099FA0B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -175,11 +169,8 @@
 		AE591A37274E93F1005F746E /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				AE591A3A274E942C005F746E /* SpoqaHanSansNeo-Bold.otf */,
-				AE591A3B274E942C005F746E /* SpoqaHanSansNeo-Light.otf */,
 				AE591A3C274E942D005F746E /* SpoqaHanSansNeo-Medium.otf */,
 				AE591A39274E942B005F746E /* SpoqaHanSansNeo-Regular.otf */,
-				AE591A38274E942A005F746E /* SpoqaHanSansNeo-Thin.otf */,
 				AE591A42274E979A005F746E /* Font+Extension.swift */,
 			);
 			path = Font;
@@ -301,16 +292,13 @@
 			files = (
 				AE72DC1D27461A9E007E5F15 /* Calendar.storyboard in Resources */,
 				AE591A41274E942D005F746E /* SpoqaHanSansNeo-Medium.otf in Resources */,
-				AE591A3F274E942D005F746E /* SpoqaHanSansNeo-Bold.otf in Resources */,
 				AE038B2D2748CD8A005C1CDD /* SearchTableViewCell.xib in Resources */,
 				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
 				AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */,
 				AE1D1877274B7F78006EED1F /* CalendarCollectionViewCell.xib in Resources */,
-				AE591A3D274E942D005F746E /* SpoqaHanSansNeo-Thin.otf in Resources */,
 				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
 				AE591A3E274E942D005F746E /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
-				AE591A40274E942D005F746E /* SpoqaHanSansNeo-Light.otf in Resources */,
 				AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */,
 				AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */,
 				AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */,

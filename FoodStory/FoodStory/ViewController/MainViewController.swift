@@ -208,13 +208,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if isFiltering() {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    //추후에 isFiltering 아닌 경우에는 삭제하는 부분을 아예 지워줘도 될거 같음
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+
         let deleteAction = UIContextualAction(style: .normal, title:  "삭제", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             let alert = UIAlertController(title: "일기를 삭제", message: "일기를 삭제하겠습니다.", preferredStyle: .alert)
             let del = UIAlertAction(title: "확인", style: .default) { _ in
                 //print("메모 삭제를 실행합니다.")
-                
+
                 if self.isFiltering() {
                     let row = self.diarySearch[indexPath.row]
                     try! self.localRealm.write {
@@ -222,7 +232,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                         self.localRealm.delete(row)
                     }
                 }
-    
+
                 else {
                     let row = self.diary[indexPath.row]
                     try! self.localRealm.write {
@@ -234,10 +244,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 tableView.reloadData()
             }
             let cancle = UIAlertAction(title: "취소", style: .cancel)
-            
+
             alert.addAction(del)
             alert.addAction(cancle)
-            
+
             self.present(alert, animated: true) {
                 print("얼럿이 올라왔습니다")
             }

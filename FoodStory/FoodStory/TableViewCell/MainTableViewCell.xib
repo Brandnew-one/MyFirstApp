@@ -52,6 +52,7 @@
                                     <constraint firstItem="auS-oS-svY" firstAttribute="centerY" secondItem="SMO-xV-IJw" secondAttribute="centerY" id="Jlu-gx-YzL"/>
                                     <constraint firstItem="94T-CF-Lj4" firstAttribute="leading" secondItem="dak-1M-igP" secondAttribute="trailing" constant="4" id="N4p-Xc-tOy"/>
                                     <constraint firstAttribute="trailing" secondItem="auS-oS-svY" secondAttribute="trailing" constant="8" id="cnE-WE-qh6"/>
+                                    <constraint firstItem="auS-oS-svY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="94T-CF-Lj4" secondAttribute="trailing" constant="8" id="eoB-0H-QAJ"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EOF-Cd-xDd">

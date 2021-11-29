@@ -52,4 +52,13 @@ extension UIViewController {
         self.present(alert,animated: true)
     }
     
+    func errorAlert(okAction: @escaping () -> ()) {
+        let alert = UIAlertController(title: "해당 이미지를 사용할 수 없습니다.", message: "HDR 파일은 사용할 수 없습니다.", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .default) { _ in
+            okAction()
+        }
+        alert.addAction(ok)
+        self.present(alert,animated: true)
+    }
+    
 }
