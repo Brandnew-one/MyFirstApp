@@ -43,10 +43,10 @@ class AddViewController: UIViewController {
         
         foodNameTextField.clipsToBounds = true
         foodNameTextField.layer.cornerRadius = 10
-        foodNameTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)!
+        foodNameTextField.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)!
         foodDiaryTextView.clipsToBounds = true
         foodDiaryTextView.layer.cornerRadius = 10
-        foodDiaryTextView.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 14)!
+        foodDiaryTextView.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)!
         
         diary = localRealm.objects(UserDiary.self).sorted(byKeyPath: "writeDate", ascending: false)
         

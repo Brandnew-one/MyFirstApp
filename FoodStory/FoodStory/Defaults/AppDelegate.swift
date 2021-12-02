@@ -10,6 +10,10 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -18,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         UILabel.appearance().textColor = .black
-        UILabel.appearance().font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 15)
+        UILabel.appearance().font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 13)
+        sleep(2)
         
         return true
     }

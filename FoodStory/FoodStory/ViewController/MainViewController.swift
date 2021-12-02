@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = UIColor(rgb: 0x3F674C)
 
         self.navigationItem.searchController = searchController
         self.navigationController?.navigationBar.prefersLargeTitles = true

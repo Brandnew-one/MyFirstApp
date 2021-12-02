@@ -45,7 +45,7 @@ class SettingViewController: UIViewController {
         
         changeProfileButton.clipsToBounds = true
         changeProfileButton.layer.cornerRadius = 10
-        changeProfileButton.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 15)
+        changeProfileButton.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 13)
         changeProfileButton.setTitle("프로필 편집", for: .selected)
         
     }

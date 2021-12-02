@@ -48,11 +48,11 @@ class SettingDetailViewController: UIViewController {
         
         userNameTextView.clipsToBounds = true
         userNameTextView.layer.cornerRadius = 10
-        userNameTextView.font = UIFont().mainRegular
+        userNameTextView.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)
 
         userIntroductionTextView.clipsToBounds = true
         userIntroductionTextView.layer.cornerRadius = 10
-        userIntroductionTextView.font = UIFont().mainRegular
+        userIntroductionTextView.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)
         
     }
     
