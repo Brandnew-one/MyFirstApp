@@ -15,6 +15,7 @@
 | 2021.11.24 | 백업/복구기능, 앱아이콘 제작 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.24/Day9.md) |
 | 2021.11.25 | 버그 수정, UI 개선 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.25/Day10.md) |
 | 2021.11.27 ~ 2021.11.28 | 버그 수정, 달력화면 수정 | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.11.27%7E28/Day11.md) |
+| 2021.12.08 ~ 2021.12.09 | LocalNotication | [링크](https://github.com/Brandnew-one/MyFirstApp/blob/master/DevLog/2021.12.08~2021.12.09/Day12.md) |
 
 
 
