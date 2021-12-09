@@ -23,9 +23,12 @@ class SettingDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.isNavigationBarHidden = false
+        tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicekd))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark.square"), style: .plain, target: self, action: #selector(saveButtonClicekd))
+        self.navigationItem.title = "프로필 설정"
         
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
@@ -64,7 +67,8 @@ class SettingDetailViewController: UIViewController {
     
     @objc
     func backButtonClicekd() {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
     }
     
     @objc
@@ -93,7 +97,8 @@ class SettingDetailViewController: UIViewController {
                     saveImageToDocumentDirectory(imageName: "\(taskToUpdate._id).png", image: profileImageView.image!)
                 }
             }
-            dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: true)
+//            dismiss(animated: true, completion: nil)
         }
     }
 }

@@ -41,3 +41,18 @@ class Userprofile: Object {
         self.userIntroduction = userIntroduction
     }
 }
+
+class UserNotification: Object {
+    @Persisted var userIndex: Int
+    @Persisted var userSettingTime: Date? // 설정시간
+    @Persisted var userSettingisOn: Bool // ON,Off 설정
+    @Persisted(primaryKey: true) var _id: ObjectId
+    
+    //클래스니까 생성자 구현해야 한다!
+    convenience init(userIndex: Int, userSettingTime: Date?, userSettingisOn: Bool) {
+        self.init()
+        self.userIndex = userIndex
+        self.userSettingTime = userSettingTime
+        self.userSettingisOn = userSettingisOn
+    }
+}

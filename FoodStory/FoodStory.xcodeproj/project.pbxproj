@@ -36,14 +36,21 @@
 		AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2627461AFB007E5F15 /* AddViewController.swift */; };
 		AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */; };
 		AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */; };
+		AE8070962760C4AD0037C9D4 /* SettingAlarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE8070952760C4AD0037C9D4 /* SettingAlarm.storyboard */; };
+		AE8070982760C5070037C9D4 /* SettingAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8070972760C5070037C9D4 /* SettingAlarmViewController.swift */; };
+		AE819F1727607D160043DE2C /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE819F1627607D160043DE2C /* LocalNotification.swift */; };
+		AE819F19276081540043DE2C /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE819F18276081540043DE2C /* UNNotificationCenter.swift */; };
 		AE904ACB274E066E00048B4A /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = AE904ACA274E066E00048B4A /* Zip */; };
 		AE904ACD274E11A200048B4A /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE904ACC274E11A200048B4A /* Alert+Extension.swift */; };
+		AE9095FC275DF7F400EE0897 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9095FB275DF7F400EE0897 /* Alarm.storyboard */; };
+		AE9095FE275DF82400EE0897 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9095FD275DF82400EE0897 /* AlarmViewController.swift */; };
 		AE939FEC274BDB4F00949F81 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE939FEB274BDB4F00949F81 /* RealmQuery.swift */; };
 		AEAD6BB9274CBE6E0027694C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */; };
 		AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */; };
 		AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */; };
 		AEAD6BBE274CCB170027694C /* SettingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */; };
 		AEAD6BC0274CD0FA0027694C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD6BBF274CD0FA0027694C /* ColorSet.swift */; };
+		AEFAA1FD275E62470074B611 /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFAA1FC275E62470074B611 /* AlarmTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,13 +81,20 @@
 		AE72DC2627461AFB007E5F15 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AE72DC2927462D6C007E5F15 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		AE72DC2A27462D6C007E5F15 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		AE8070952760C4AD0037C9D4 /* SettingAlarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingAlarm.storyboard; sourceTree = "<group>"; };
+		AE8070972760C5070037C9D4 /* SettingAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAlarmViewController.swift; sourceTree = "<group>"; };
+		AE819F1627607D160043DE2C /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		AE819F18276081540043DE2C /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 		AE904ACC274E11A200048B4A /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		AE9095FB275DF7F400EE0897 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
+		AE9095FD275DF82400EE0897 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		AE939FEB274BDB4F00949F81 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
 		AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingDetail.storyboard; sourceTree = "<group>"; };
 		AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDetailViewController.swift; sourceTree = "<group>"; };
 		AEAD6BBF274CD0FA0027694C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		AEFAA1FC275E62470074B611 /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,8 @@
 				AE72DC1C27461A9E007E5F15 /* Calendar.storyboard */,
 				AE72DC1E27461AB3007E5F15 /* Setting.storyboard */,
 				AEAD6BBB274CCB030027694C /* SettingDetail.storyboard */,
+				AE9095FB275DF7F400EE0897 /* Alarm.storyboard */,
+				AE8070952760C4AD0037C9D4 /* SettingAlarm.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +165,8 @@
 				AE72DC2227461AD6007E5F15 /* CalendarViewController.swift */,
 				AE72DC2427461AE8007E5F15 /* SettingViewController.swift */,
 				AEAD6BBD274CCB170027694C /* SettingDetailViewController.swift */,
+				AE9095FD275DF82400EE0897 /* AlarmViewController.swift */,
+				AE8070972760C5070037C9D4 /* SettingAlarmViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -162,6 +180,7 @@
 				AE038B2B2748CD8A005C1CDD /* SearchTableViewCell.xib */,
 				AEAD6BB7274CBE6E0027694C /* SettingTableViewCell.swift */,
 				AEAD6BB8274CBE6E0027694C /* SettingTableViewCell.xib */,
+				AEFAA1FC275E62470074B611 /* AlarmTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -174,6 +193,15 @@
 				AE591A42274E979A005F746E /* Font+Extension.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		AE69934B27623D5C00914257 /* LocalNotification */ = {
+			isa = PBXGroup;
+			children = (
+				AE819F1627607D160043DE2C /* LocalNotification.swift */,
+				AE819F18276081540043DE2C /* UNNotificationCenter.swift */,
+			);
+			path = LocalNotification;
 			sourceTree = "<group>";
 		};
 		AE72DBF927461971007E5F15 = {
@@ -204,8 +232,9 @@
 				AE39ECE22747826B0079462B /* Realm */,
 				AE0A3034274A1D6D00C6EAFE /* Extension */,
 				AE1D1878274B7FE9006EED1F /* CollectionViewCell */,
-				AEAD6BBF274CD0FA0027694C /* ColorSet.swift */,
 				AE591A37274E93F1005F746E /* Font */,
+				AEAD6BBF274CD0FA0027694C /* ColorSet.swift */,
+				AE69934B27623D5C00914257 /* LocalNotification */,
 			);
 			path = FoodStory;
 			sourceTree = "<group>";
@@ -296,10 +325,12 @@
 				AE72DC1227461973007E5F15 /* LaunchScreen.storyboard in Resources */,
 				AEAD6BBC274CCB030027694C /* SettingDetail.storyboard in Resources */,
 				AE1D1877274B7F78006EED1F /* CalendarCollectionViewCell.xib in Resources */,
+				AE8070962760C4AD0037C9D4 /* SettingAlarm.storyboard in Resources */,
 				AE72DC1F27461AB3007E5F15 /* Setting.storyboard in Resources */,
 				AE591A3E274E942D005F746E /* SpoqaHanSansNeo-Regular.otf in Resources */,
 				AE72DC0F27461973007E5F15 /* Assets.xcassets in Resources */,
 				AE72DC2C27462D6C007E5F15 /* MainTableViewCell.xib in Resources */,
+				AE9095FC275DF7F400EE0897 /* Alarm.storyboard in Resources */,
 				AE72DC2127461ABD007E5F15 /* Add.storyboard in Resources */,
 				AEAD6BBA274CBE6E0027694C /* SettingTableViewCell.xib in Resources */,
 				AE72DC0D27461971007E5F15 /* Main.storyboard in Resources */,
@@ -313,11 +344,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9095FE275DF82400EE0897 /* AlarmViewController.swift in Sources */,
 				AE72DC2327461AD6007E5F15 /* CalendarViewController.swift in Sources */,
+				AE8070982760C5070037C9D4 /* SettingAlarmViewController.swift in Sources */,
 				AE72DC2B27462D6C007E5F15 /* MainTableViewCell.swift in Sources */,
 				AE939FEC274BDB4F00949F81 /* RealmQuery.swift in Sources */,
 				AE1D1876274B7F78006EED1F /* CalendarCollectionViewCell.swift in Sources */,
 				AEAD6BBE274CCB170027694C /* SettingDetailViewController.swift in Sources */,
+				AEFAA1FD275E62470074B611 /* AlarmTableViewCell.swift in Sources */,
 				AE0A3036274A1D9E00C6EAFE /* TableViewCell+Extension.swift in Sources */,
 				AE72DC2727461AFB007E5F15 /* AddViewController.swift in Sources */,
 				AEAD6BB9274CBE6E0027694C /* SettingTableViewCell.swift in Sources */,
@@ -331,6 +365,8 @@
 				AEAD6BC0274CD0FA0027694C /* ColorSet.swift in Sources */,
 				AE904ACD274E11A200048B4A /* Alert+Extension.swift in Sources */,
 				AE591A43274E979A005F746E /* Font+Extension.swift in Sources */,
+				AE819F19276081540043DE2C /* UNNotificationCenter.swift in Sources */,
+				AE819F1727607D160043DE2C /* LocalNotification.swift in Sources */,
 				AE038B2C2748CD8A005C1CDD /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,6 +34,13 @@ extension UIViewController {
         
         return nowDateForm
     }
+    
+    func timeToString(nowDate: Date) -> String {
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        return timeFormatter.string(from: nowDate)
+    }
+    
 }
 
 

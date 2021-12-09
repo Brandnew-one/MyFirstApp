@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-LR-CET">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-LR-CET">
                                 <rect key="frame" x="103.5" y="314.5" width="207" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="N3a-LR-CET" secondAttribute="height" multiplier="1:1" id="3Fu-89-coO"/>
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 2" width="775" height="777"/>
+        <image name="icon" width="341" height="341"/>
     </resources>
 </document>

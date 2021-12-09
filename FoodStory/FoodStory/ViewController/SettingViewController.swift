@@ -12,8 +12,8 @@ import MobileCoreServices
 
 class SettingViewController: UIViewController {
     
-    let settingImage: [String] = ["speaker.fill",  "tray.fill", "tray.and.arrow.down.fill"]
-    let settingString: [String] = ["공지사항", "백업", "복구"]
+    let settingImage: [String] = ["speaker.fill",  "tray.fill", "tray.and.arrow.down.fill", "tray.and.arrow.down.fill"]
+    let settingString: [String] = ["알림", "백업", "복구", "오픈라이센스"]
     
     var localRealm = try! Realm()
     var profile: Results<Userprofile>!
@@ -32,6 +32,10 @@ class SettingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
+        navigationItem.title = "프로필"
+        navigationController?.isNavigationBarHidden = false
+        tabBarController?.tabBar.isHidden = false
+
         
         profile = localRealm.objects(Userprofile.self)
         if !profile.isEmpty {
@@ -52,6 +56,7 @@ class SettingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
         if !profile.isEmpty {
             userProfileImageView.image = loadImageFromDocumentDirectory(imageName: "\(profile[0]._id).png")
             userNameLabel.text = profile[0].userName
@@ -85,9 +90,8 @@ class SettingViewController: UIViewController {
     @IBAction func changeProfileButtonClicked(_ sender: UIButton) {
         let sb = UIStoryboard(name: "SettingDetail", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SettingDetailViewController") as! SettingDetailViewController
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
+
     }
     
     
@@ -116,8 +120,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if indexPath.row == 0 {
+            let sb = UIStoryboard(name: "Alarm", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "AlarmViewController") as! AlarmViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
         //백업
-        if indexPath.row == 1 {
+        else if indexPath.row == 1 {
             var urlPath = [URL]()
             if let path = documentDirectoryPath() {
                 let realm = (path as NSString).appendingPathComponent("default.realm")
@@ -157,6 +167,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 self.present(documentPicker, animated: true, completion: nil)
             }
         }
+        
+        
     }
 }
 

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting Alarm View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingAlarmViewController" id="Y6W-OH-hqX" customClass="SettingAlarmViewController" customModule="FoodStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-Gw-j1B">
+                                <rect key="frame" x="0.0" y="240" width="414" height="216"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
+                            </datePicker>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWW-Td-5Hu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="Grs-Ea-TG3">
+                                        <barButtonItem key="leftBarButtonItem" title="취소" id="GVq-KK-NZX">
+                                            <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancelButtonClicked:" destination="Y6W-OH-hqX" id="faZ-c9-59t"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="저장" id="gm3-IO-7wn">
+                                            <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonClicked:" destination="Y6W-OH-hqX" id="ZjY-8Q-Bqt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.80784313725490198" green="0.86274509803921573" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fWW-Td-5Hu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ev1-l2-5Lh"/>
+                            <constraint firstItem="fJD-Gw-j1B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vgx-6a-rbZ"/>
+                            <constraint firstItem="fWW-Td-5Hu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="aNO-Xd-LmN"/>
+                            <constraint firstItem="fWW-Td-5Hu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="age-2s-8Eu"/>
+                            <constraint firstItem="fJD-Gw-j1B" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="nKx-fP-CXY"/>
+                            <constraint firstItem="fJD-Gw-j1B" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-100" id="uQu-mQ-oxq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="fJD-Gw-j1B" id="dBF-OZ-D7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="116"/>
+        </scene>
+    </scenes>
+</document>
