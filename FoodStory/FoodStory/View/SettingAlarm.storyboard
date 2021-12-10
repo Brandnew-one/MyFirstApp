@@ -41,7 +41,7 @@
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.80784313725490198" green="0.86274509803921573" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fWW-Td-5Hu" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Ev1-l2-5Lh"/>
                             <constraint firstItem="fJD-Gw-j1B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Vgx-6a-rbZ"/>

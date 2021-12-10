@@ -164,6 +164,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return 120
         }
         else {
+//            return UITableView.automaticDimension
             return UIScreen.main.bounds.height * 0.7
         }
     }

@@ -57,6 +57,10 @@ class SettingDetailViewController: UIViewController {
         userIntroductionTextView.layer.cornerRadius = 10
         userIntroductionTextView.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 13)
         
+        changeButton.clipsToBounds = true
+        changeButton.layer.cornerRadius = 10
+        changeButton.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 13)
+        
     }
     
     @IBAction func changeImageButtonClicked(_ sender: UIButton) {

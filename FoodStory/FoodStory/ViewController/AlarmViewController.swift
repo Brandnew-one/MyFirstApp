@@ -17,6 +17,8 @@ class AlarmViewController: UIViewController {
     var localNotificationList: Results<UserNotification>!
     let userNotificationCenter = UNUserNotificationCenter.current()
     
+    
+    @IBOutlet weak var totalAlarmView: UIView!
     @IBOutlet weak var totalAlarmLabel: UILabel!
     @IBOutlet weak var totalAlarmSwitch: UISwitch!
     @IBOutlet weak var tableView: UITableView!
@@ -62,6 +64,8 @@ class AlarmViewController: UIViewController {
             }
         }
         
+        totalAlarmView.clipsToBounds = true
+        totalAlarmView.layer.cornerRadius = 10
         tabBarController?.tabBar.isHidden = true
         navigationController?.isNavigationBarHidden = false
         navigationItem.title = "알림"

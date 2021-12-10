@@ -27,6 +27,8 @@ class CalendarViewController: UIViewController {
         
         calendarView.dataSource = self
         calendarView.delegate = self
+        calendarView.clipsToBounds = true
+        calendarView.layer.cornerRadius = 10
         
         // 달력의 년월 글자 바꾸기
         calendarView.appearance.headerDateFormat = "YYYY년 M월"
@@ -49,6 +51,8 @@ class CalendarViewController: UIViewController {
         collectionView.register(nibName, forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.clipsToBounds = true
+        collectionView.layer.cornerRadius = 10
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8

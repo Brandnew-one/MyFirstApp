@@ -128,6 +128,7 @@
                         <outlet property="totalAlarmDescription" destination="GYB-e6-wgB" id="QKf-No-oUz"/>
                         <outlet property="totalAlarmLabel" destination="f94-sG-KGE" id="FtK-Dy-Z64"/>
                         <outlet property="totalAlarmSwitch" destination="E2t-50-ANY" id="3xr-Lk-yu5"/>
+                        <outlet property="totalAlarmView" destination="Hc9-PL-naF" id="ydw-5N-AQ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
