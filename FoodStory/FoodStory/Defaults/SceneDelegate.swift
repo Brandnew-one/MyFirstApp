@@ -7,6 +7,9 @@
 
 import UIKit
 
+import Firebase
+import AppTrackingTransparency
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -24,6 +27,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            
+            ATTrackingManager.requestTrackingAuthorization { status in
+                switch status {
+                case .notDetermined:
+                    print("notDetermined")
+                    Analytics.setAnalyticsCollectionEnabled(false)
+                case .restricted:
+                    print("restricted")
+                    Analytics.setAnalyticsCollectionEnabled(false)
+                case .denied:
+                    print("denied")
+                    Analytics.setAnalyticsCollectionEnabled(false)
+                case .authorized:
+                    print("authorized")
+                    Analytics.setAnalyticsCollectionEnabled(true)
+                @unknown default:
+                    print("unknown")
+                    Analytics.setAnalyticsCollectionEnabled(false)
+                }
+            }
+        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {

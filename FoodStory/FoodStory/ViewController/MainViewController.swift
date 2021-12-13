@@ -6,6 +6,7 @@
 //
 
 import RealmSwift
+import Firebase
 import UIKit
 import SwiftUI
 
@@ -60,6 +61,10 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        Analytics.logEvent("share_image", parameters: [
+          "name": "Shin" as NSObject,
+          "full_text": "배고파요" as NSObject,
+        ])
         tableView.reloadData()
     }
     

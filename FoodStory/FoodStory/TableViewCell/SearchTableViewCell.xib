@@ -22,14 +22,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u56-Gi-QHr">
                                 <rect key="frame" x="116" y="14" width="44.5" height="20.5"/>
-                                <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkn-Ve-FOB">
                                 <rect key="frame" x="116" y="42.5" width="37.5" height="18"/>
-                                <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                 <color key="tintColor" red="0.2470588235" green="0.4039215686" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.70980392160000005" green="0.80392156859999997" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wkn-Ve-FOB" firstAttribute="leading" secondItem="oZK-6l-mRM" secondAttribute="trailing" constant="8" id="1rT-JC-hwS"/>
                             <constraint firstItem="Qmb-EO-l6A" firstAttribute="leading" secondItem="oZK-6l-mRM" secondAttribute="trailing" constant="8" id="CiZ-x7-yIB"/>
@@ -103,7 +103,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.80784313725490198" green="0.86274509803921573" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="fgZ-gB-IGc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3Db-fH-TZC"/>
                     <constraint firstAttribute="bottom" secondItem="fgZ-gB-IGc" secondAttribute="bottom" constant="2" id="FAb-lf-nyh"/>
