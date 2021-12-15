@@ -12,8 +12,8 @@ import MobileCoreServices
 
 class SettingViewController: UIViewController {
     
-    let settingImage: [String] = ["speaker.fill",  "tray.fill", "tray.and.arrow.down.fill", "tray.and.arrow.down.fill"]
-    let settingString: [String] = ["알림", "백업", "복구", "오픈라이센스"]
+    let settingImage: [String] = ["speaker.fill",  "tray.fill", "tray.and.arrow.down.fill"]
+    let settingString: [String] = ["알림", "백업", "복구"]
     
     var localRealm = try! Realm()
     var profile: Results<Userprofile>!

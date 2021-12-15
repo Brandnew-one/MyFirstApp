@@ -74,7 +74,7 @@ class AlarmViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         totalAlarmLabel.text = "전체알림"
-        totalAlarmDescription.text = "테스트중입니다.\n알람을 비활성화 하시면 설정한 알람이 동작하지 않습니다."
+        totalAlarmDescription.text = "알람을 비활성화 하시면 설정한 알람이 동작하지 않습니다."
         
         isFirstOpen()
     }
