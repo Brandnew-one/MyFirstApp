@@ -74,7 +74,7 @@ class AlarmViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         totalAlarmLabel.text = "전체알림"
-        totalAlarmDescription.text = "알람을 비활성화 하시면 설정한 알람이 동작하지 않습니다."
+        totalAlarmDescription.text = "알림을 비활성화 하시면 설정한 알림이 동작하지 않습니다."
         
         isFirstOpen()
     }
@@ -122,16 +122,26 @@ class AlarmViewController: UIViewController {
     @IBAction func totalAlarmSwitchClicked(_ sender: UISwitch) {
         if sender.isOn {
             let taskToUdate = localNotificationList[0]
+            print(sender.isOn)
             try! localRealm.write {
                 taskToUdate.userSettingisOn = sender.isOn
+            }
+            for i in 1...3 {
+                let row = localNotificationList[i]
+                let userNoti = LocalNotification(id: row._id, date: row.userSettingTime!, isOn: row.userSettingisOn)
+                userNotificationCenter.addNotificationRequest(by: userNoti)
             }
             totalAlarmDescription.isHidden = true
             tableView.isHidden = false
         }
         else {
             let taskToUdate = localNotificationList[0]
+            print(sender.isOn)
             try! localRealm.write {
                 taskToUdate.userSettingisOn = sender.isOn
+            }
+            for i in 1...3 {
+                userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [localNotificationList[i]._id.stringValue])
             }
             totalAlarmDescription.isHidden = false
             tableView.isHidden = true
@@ -185,7 +195,7 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "알람설정"
+        return "알림설정"
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

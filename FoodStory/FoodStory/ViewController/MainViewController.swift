@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     var profile: Results<Userprofile>!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,13 @@ class MainViewController: UIViewController {
 //                print("=======> \(sub)")
 //            }
 //        }
+        
+        // 근데 왜 스토리보드상에서 레이아웃 설정이 안될까? (하나씩 코드로 바꾸는 과정 필요)
+        if !diary.isEmpty {
+            emptyLabel.isHidden = true
+        } else {
+            emptyLabel.isHidden = false
+        }
         
     }
     
