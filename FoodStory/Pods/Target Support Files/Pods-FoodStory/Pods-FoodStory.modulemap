@@ -1,6 +1,0 @@
-framework module Pods_FoodStory {
-  umbrella header "Pods-FoodStory-umbrella.h"
-
-  export *
-  module * { export * }
-}
