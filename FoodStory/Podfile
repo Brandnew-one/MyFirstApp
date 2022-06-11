@@ -6,8 +6,23 @@ target 'FoodStory' do
   use_frameworks!
 
   # Pods for FoodStory
+
+# FireBase
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Messaging'
+
+# Util
+  pod 'IQKeyboardManagerSwift'
+
+# Zip
+  source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Zip', '~> 2.1'
+
+# FsCalendar
+  pod 'FSCalendar'
+
+# Realm
+  pod 'RealmSwift', '~>10'
 
 end

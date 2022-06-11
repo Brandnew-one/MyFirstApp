@@ -8,13 +8,12 @@
 import UIKit
 
 class CalendarCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "CalendarCollectionViewCell"
-    
-    @IBOutlet weak var collectionImageView: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
+  static let identifier = "CalendarCollectionViewCell"
+
+  @IBOutlet weak var collectionImageView: UIImageView!
+
+  override func awakeFromNib() {
+    super.awakeFromNib()
+  }
 }

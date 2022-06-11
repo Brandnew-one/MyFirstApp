@@ -9,8 +9,7 @@ import Foundation
 import RealmSwift
 
 struct LocalNotification: Codable {
-    var id: ObjectId
-    var date: Date
-    var isOn: Bool
-    
+  var id: ObjectId
+  var date: Date
+  var isOn: Bool
 }
