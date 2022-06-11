@@ -31,6 +31,7 @@ class AddViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    
     self.navigationController?.navigationBar.prefersLargeTitles = false
     self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicekd))
     self.navigationItem.leftBarButtonItem?.tintColor = UIColor(rgb: 0x3F674C)
